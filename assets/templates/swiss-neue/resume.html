@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>陈若岚 - AI产品经理</title>
+<style>
+@page { size: A4 portrait; margin: 0; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  width: 210mm;
+  height: 297mm;
+  font-family: "Helvetica Neue", "PingFang SC", sans-serif;
+  color: #333;
+  font-size: 9.5pt;
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.page {
+  width: 210mm;
+  height: 297mm;
+  overflow: hidden;
+  /* Visual centering: left padding smaller because label col is lightweight */
+  padding: 10mm 10mm 10mm 8mm;
+}
+
+/* Flex row system */
+.row {
+  display: flex;
+  align-items: baseline;
+}
+.section { margin-top: 6.5mm; }
+.entry + .entry { margin-top: 3.5mm; }
+
+/* Label column: 24mm, right-aligned */
+.label {
+  width: 24mm;
+  min-width: 24mm;
+  text-align: right;
+  font-size: 8.5pt;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.2pt;
+  color: #999;
+  padding-right: 4.5mm;
+  flex-shrink: 0;
+}
+
+.content { flex: 1; }
+
+/* Avatar */
+.avatar {
+  position: absolute;
+  top: 16mm;
+  right: 12mm;
+  width: 18mm;
+  height: 24mm;
+  object-fit: cover;
+  
+}
+
+/* Name */
+.name {
+  font-size: 38pt;
+  font-weight: 300;
+  color: #c0392b;
+  letter-spacing: -0.5pt;
+  line-height: 1.1;
+  margin-bottom: 2mm;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 10pt;
+  color: #333;
+  font-weight: 450;
+  line-height: 1.5;
+  margin-bottom: 1.5mm;
+}
+
+/* Contact */
+.contact {
+  font-size: 9pt;
+  color: #777;
+  line-height: 1.5;
+}
+.contact a { color: #777; text-decoration: underline; text-underline-offset: 2px; }
+
+/* Entry */
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5mm;
+}
+.entry-title {
+  font-size: 10.5pt;
+  font-weight: 600;
+  color: #111;
+  line-height: 1.35;
+}
+.entry-date {
+  font-size: 8.5pt;
+  color: #999;
+  white-space: nowrap;
+}
+.entry-sub {
+  font-size: 9.5pt;
+  font-weight: 500;
+  color: #444;
+  margin: 1mm 0 0.5mm;
+  line-height: 1.35;
+}
+.entry-body {
+  font-size: 9.5pt;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 2mm;
+}
+.entry-body .num {
+  font-weight: 600;
+  color: #111;
+}
+
+/* Skills */
+.skills {
+  font-size: 9.5pt;
+  color: #333;
+  line-height: 1.6;
+}
+.skills .cat {
+  font-weight: 600;
+  color: #111;
+}
+
+/* QR */
+.qr-wrap {
+  position: absolute;
+  bottom: 14mm;
+  right: 12mm;
+  text-align: center;
+}
+.qr-img {
+  width: 12mm;
+  height: 12mm;
+  border-radius: 2px;
+}
+.qr-note {
+  font-size: 6.5pt;
+  color: #bbb;
+  margin-top: 0.8mm;
+}
+</style>
+</head>
+<body>
+<main class="page">
+  <img class="avatar" src="assets/avatar.png" alt="">
+
+  <!-- Name block -->
+  <div class="row">
+    <div class="label"></div>
+    <div class="content">
+      <div class="name">陈若岚</div>
+      <div class="subtitle">AI 产品经理 · 擅长把复杂问题拆成可验证的原型和数据指标</div>
+      <div class="contact">138-0000-0000 · candidate@example.com · <a href="https://example.com">example.com</a></div>
+    </div>
+  </div>
+
+  <!-- Profile -->
+  <div class="row section">
+    <div class="label">简介</div>
+    <div class="content">
+      <div class="entry-body">技术与业务理解兼具的产品候选人。过往在 AI 应用、内容增长与内部工具项目中，从用户场景出发完成需求分析、原型设计、实验验证和交付跟进。具备数据分析能力，能独立完成指标拆解、评测设计和效果验证。</div>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <div class="row section">
+    <div class="label">教育</div>
+    <div class="content">
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">岭南科技大学 · 软件工程 · 本科</span>
+          <span class="entry-date">2022.09 – 2026.06</span>
+        </div>
+        <div class="entry-body">GPA <span class="num">3.8</span>/5.0（前10%）· 校级一等奖学金 · 创新创业竞赛金奖 · CET-6 <span class="num">540</span><br>主修数据结构、数据库系统、人机交互、软件工程、机器学习基础、产品设计方法</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Experience -->
+  <div class="row section">
+    <div class="label">实习</div>
+    <div class="content">
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">云杉科技 · AI 应用产品经理</span>
+          <span class="entry-date">2025.06 – 2026.03</span>
+        </div>
+        <div class="entry-sub">智能检索助手 · 需求分析→原型验证</div>
+        <div class="entry-body">面向企业知识库"搜得到但难以定位"的问题，负责检索入口、结果聚合、答案引用与反馈链路设计；输出 PRD、Figma 原型和可交互 Demo，推动方案进入研发排期，验证<span class="num">搜索定位效率提升</span>的核心路径。</div>
+        <div class="entry-sub">模型效果评测 · 指标体系与 Badcase 归因</div>
+        <div class="entry-body">搭建覆盖准确性、可读性、引用一致性的评测表，整理 <span class="num">300+</span> 条典型 Case，与算法同学复盘偏差原因；Prompt 调优使核心场景通过率从 <span class="num">72%</span> 提升至 <span class="num">86%</span>。</div>
+      </div>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">南湾内容科技 · 内容增长产品助理</span>
+          <span class="entry-date">2025.01 – 2025.05</span>
+        </div>
+        <div class="entry-sub">创作者数据看板 · 指标拆解与运营提效</div>
+        <div class="entry-body">梳理内容曝光、点击、转化和留存指标，设计看板字段与筛选方式；上线后周报整理时间从 <span class="num">4h</span> 缩短至 <span class="num">40min</span>，支持 <span class="num">20+</span> 位创作者复盘内容表现。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Projects -->
+  <div class="row section">
+    <div class="label">项目</div>
+    <div class="content">
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">校园 AI 助手 · Agent Workflow 原型</span>
+          <span class="entry-date">2025</span>
+        </div>
+        <div class="entry-body">围绕学生事务咨询高频问题，设计"问题识别→知识检索→表单引导→人工转接"流程，低代码搭建可演示原型；在 <span class="num">30</span> 人试用中收集反馈，沉淀 FAQ、异常兜底与流程优化清单。</div>
+      </div>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">数据分析课程项目 · 用户流失预测</span>
+          <span class="entry-date">2024</span>
+        </div>
+        <div class="entry-body">基于公开数据集完成用户行为清洗、特征构造和预测建模，把模型结果转译为产品策略建议；输出分析报告和可视化仪表盘，获优秀评级。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <div class="row section">
+    <div class="label">能力</div>
+    <div class="content">
+      <div class="skills">
+        <span class="cat">AI 产品:</span> Prompt 工程 · Agent Workflow · 模型评测 · Badcase 归因 · RAG 检索<br>
+        <span class="cat">产品交付:</span> 需求分析 · PRD/Figma · 用户访谈 · 竞品分析 · 指标拆解<br>
+        <span class="cat">数据工具:</span> SQL · Python · Excel · 可视化看板<br>
+        <span class="cat">工具链:</span> Codex · Claude Code · Cursor · Obsidian
+      </div>
+    </div>
+  </div>
+
+  <div class="qr-wrap">
+    <img class="qr-img" src="assets/qr.png" alt="">
+    <div class="qr-note">kw-aigc.cn</div>
+  </div>
+</main>
+</body>
+</html>

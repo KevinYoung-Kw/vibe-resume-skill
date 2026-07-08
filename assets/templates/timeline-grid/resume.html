@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>示例候选人-Timeline Grid模板</title>
+  <style>
+    @page { size: A4; margin: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: #f3f4f6;
+      font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .page {
+      width: 210mm;
+      height: 297mm;
+      overflow: hidden;
+      background: #fff;
+      padding: 10mm 8mm 8mm 8mm;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 4mm;
+      margin-bottom: 2.5mm;
+      padding-bottom: 3mm;
+      border-bottom: 1.5pt solid #1f2937;
+    }
+    .avatar {
+      width: 20mm;
+      height: 26mm;
+      object-fit: cover;
+      
+      
+    }
+    .header-info { flex: 1; }
+    .name {
+      font-size: 24pt;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.15;
+    }
+    .meta {
+      margin-top: 2mm;
+      font-size: 9.5pt;
+      color: #4b5563;
+      line-height: 1.6;
+      font-weight: 450;
+    }
+    .meta a { color: #2563eb; text-decoration: underline; text-underline-offset: 2px; }
+
+    /* Intro */
+    .intro {
+      font-size: 10pt;
+      color: #333;
+      line-height: 1.55;
+      margin: 3mm 0 4mm;
+      font-weight: 450;
+    }
+    .intro .lead { font-weight: 600; color: #111; }
+
+    /* Timeline container: uses a left border as the spine */
+    .timeline {
+      margin-left: 6mm;
+      border-left: 1.8pt solid #e5e7eb;
+      padding-left: 7mm;
+    }
+
+    /* Section title row */
+    .tl-section {
+      margin-bottom: 2.5mm;
+    }
+    .tl-section-title {
+      font-size: 10.5pt;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 2.5mm;
+      position: relative;
+      line-height: 1.3;
+      letter-spacing: 0.3pt;
+    }
+    /* Section marker: small square, aligned to title center */
+    .tl-section-title::before {
+      content: "";
+      position: absolute;
+      left: calc(-7mm - 0.9pt);
+      top: 0.15em;
+      width: 2.8mm;
+      height: 2.8mm;
+      background: #374151;
+      border-radius: 1px;
+      transform: translateX(-50%);
+    }
+
+    /* Entry */
+    .tl-entry {
+      margin-bottom: 2.5mm;
+      position: relative;
+    }
+    /* Small dot: centered with entry title */
+    .tl-entry::before {
+      content: "";
+      position: absolute;
+      left: calc(-7mm - 0.9pt);
+      top: 0.55em;
+      width: 1.8mm;
+      height: 1.8mm;
+      background: #d1d5db;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .tl-entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.5mm;
+    }
+    .tl-entry-title {
+      font-size: 10.5pt;
+      font-weight: 600;
+      color: #111;
+      line-height: 1.3;
+    }
+    .tl-entry-date {
+      font-size: 9pt;
+      color: #9ca3af;
+      white-space: nowrap;
+      font-weight: 450;
+    }
+    .tl-entry-sub {
+      font-size: 9.5pt;
+      font-weight: 500;
+      color: #374151;
+      margin: 1mm 0 0.5mm;
+      line-height: 1.3;
+    }
+    .tl-entry-body {
+      font-size: 9.8pt;
+      color: #4b5563;
+      line-height: 1.48;
+      text-align: justify;
+      font-weight: 450;
+    }
+    .tl-entry-body .highlight {
+      color: #2563eb;
+      font-weight: 600;
+    }
+
+    /* Footer: contained in a subtle background */
+    .footer {
+      position: absolute;
+      bottom: 10mm;
+      left: 14mm;
+      right: 14mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3.5mm 4mm;
+      background: #f8f9fa;
+      border-radius: 4px;
+    }
+    .skills-area {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2mm;
+      max-width: 145mm;
+    }
+    .skill-pill {
+      display: inline-block;
+      padding: 1mm 3mm;
+      background: #fff;
+      border: 0.4pt solid #e5e7eb;
+      border-radius: 3px;
+      font-size: 8.5pt;
+      color: #374151;
+      line-height: 1.4;
+      font-weight: 450;
+    }
+    .qr-wrap { text-align: center; }
+    .qr-img {
+      width: 13mm;
+      height: 13mm;
+      border-radius: 2px;
+    }
+    .qr-note {
+      font-size: 6.5pt;
+      color: #9ca3af;
+      margin-top: 1mm;
+    }
+  </style>
+</head>
+<body>
+  <main class="page" style="position:relative;">
+    <header class="header">
+      <img class="avatar" src="assets/avatar.png" alt="">
+      <div class="header-info">
+        <div class="name">陈若岚</div>
+        <div class="meta">
+          软件工程 · 岭南科技大学 · 本科 · GPA 3.8/5.0（前10%） · 2022 - 2026<br>
+          138-0000-0000 · candidate@example.com · <a href="https://example.com">example.com</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="intro">
+      <span class="lead">技术与业务理解兼具的产品候选人，擅长把复杂问题拆成可验证的原型和数据指标。</span> 过往在 AI 应用、内容增长与内部工具项目中，从用户场景出发完成需求分析、原型设计、实验验证和交付跟进。
+    </div>
+
+    <div class="timeline">
+      <div class="tl-section">
+        <div class="tl-section-title">实习经历</div>
+        <div class="tl-entry">
+          <div class="tl-entry-header">
+            <div class="tl-entry-title">云杉科技 · AI 应用产品经理</div>
+            <div class="tl-entry-date">2025.06 - 2026.03</div>
+          </div>
+          <div class="tl-entry-sub">智能检索助手 · 从需求分析到原型验证</div>
+          <div class="tl-entry-body">面向企业知识库"搜得到但难以定位"的问题，负责检索入口、结果聚合、答案引用与反馈链路设计；输出 PRD、Figma 原型和可交互 Demo，推动方案进入研发排期，验证<span class="highlight">搜索定位效率提升</span>的核心路径。</div>
+          <div class="tl-entry-sub">模型效果评测 · 指标体系与 Badcase 归因</div>
+          <div class="tl-entry-body">搭建覆盖准确性、可读性、引用一致性的评测表，整理 300+ 条典型 Case，并与算法同学复盘回答偏差原因；通过 Prompt 调优和样本分层，使核心场景通过率从 72% 提升至 <span class="highlight">86%</span>。</div>
+        </div>
+        <div class="tl-entry">
+          <div class="tl-entry-header">
+            <div class="tl-entry-title">南湾内容科技 · 内容增长产品助理</div>
+            <div class="tl-entry-date">2025.01 - 2025.05</div>
+          </div>
+          <div class="tl-entry-sub">创作者数据看板 · 指标拆解与运营提效</div>
+          <div class="tl-entry-body">针对运营团队手工汇总慢的问题，梳理内容曝光、点击、转化和留存指标，设计看板字段与筛选方式；上线后将周报整理时间从 4h 缩短至 <span class="highlight">40min</span>，并支持 20+ 位创作者复盘内容表现。</div>
+        </div>
+      </div>
+
+      <div class="tl-section">
+        <div class="tl-section-title">项目经历</div>
+        <div class="tl-entry">
+          <div class="tl-entry-header">
+            <div class="tl-entry-title">校园 AI 助手 · Agent Workflow 原型</div>
+            <div class="tl-entry-date">2025</div>
+          </div>
+          <div class="tl-entry-body">围绕学生事务咨询高频问题，设计"问题识别 - 知识检索 - 表单引导 - 人工转接"流程，使用低代码工具搭建可演示原型；在 30 人试用中收集反馈，沉淀 FAQ、异常兜底与流程优化清单。</div>
+        </div>
+        <div class="tl-entry">
+          <div class="tl-entry-header">
+            <div class="tl-entry-title">数据分析课程项目 · 用户流失预测</div>
+            <div class="tl-entry-date">2024</div>
+          </div>
+          <div class="tl-entry-body">基于公开数据集完成用户行为清洗、特征构造和预测建模，并把模型结果转译为产品策略建议；输出分析报告和可视化仪表盘，获得课程项目优秀评级。</div>
+        </div>
+      </div>
+
+      <div class="tl-section">
+        <div class="tl-section-title">教育 · 荣誉</div>
+        <div class="tl-entry">
+          <div class="tl-entry-header">
+            <div class="tl-entry-title">岭南科技大学 · 软件工程（本科）</div>
+            <div class="tl-entry-date">2022.09 - 2026.06</div>
+          </div>
+          <div class="tl-entry-body">主修数据结构、数据库系统、人机交互、软件工程、机器学习基础、产品设计方法。校级一等奖学金、创新创业竞赛金奖；CET-6 540。</div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="skills-area">
+        <span class="skill-pill">需求分析</span>
+        <span class="skill-pill">Prompt 工程</span>
+        <span class="skill-pill">Agent Workflow</span>
+        <span class="skill-pill">模型评测</span>
+        <span class="skill-pill">Badcase 归因</span>
+        <span class="skill-pill">PRD / Figma</span>
+        <span class="skill-pill">SQL / Python</span>
+        <span class="skill-pill">用户访谈</span>
+        <span class="skill-pill">竞品分析</span>
+        <span class="skill-pill">指标拆解</span>
+        <span class="skill-pill">Codex / Claude Code</span>
+        <span class="skill-pill">Cursor / Obsidian</span>
+      </div>
+      <div class="qr-wrap">
+        <img class="qr-img" src="assets/qr.png" alt="">
+        <div class="qr-note">作品集</div>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

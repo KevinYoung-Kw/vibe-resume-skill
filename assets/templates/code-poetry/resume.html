@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>陈若岚 - AI产品经理</title>
+<style>
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 210mm;
+  height: 297mm;
+  font-family: "JetBrains Mono", "Menlo", "PingFang SC", monospace;
+  color: #333;
+  font-size: 9pt;
+  line-height: 1.45;
+  font-weight: 400;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Left gutter */
+.gutter {
+  width: 12mm;
+  min-width: 12mm;
+  background: #f5f5f5;
+  padding: 10mm 2mm 8mm 2mm;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.gutter-item {
+  font-size: 8pt;
+  color: #aaa;
+  text-align: right;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+/* Main content */
+.main {
+  flex: 1;
+  padding: 10mm 8mm 8mm 4mm;
+  overflow: hidden;
+}
+
+/* Avatar */
+.avatar {
+  position: absolute;
+  top: 12mm;
+  right: 14mm;
+  width: 16mm;
+  height: 21mm;
+  object-fit: cover;
+  
+  
+}
+
+/* Comment block name */
+.comment-name {
+  font-size: 16pt;
+  font-weight: 700;
+  color: #6a9955;
+  margin-bottom: 2mm;
+}
+.comment-meta {
+  font-size: 9pt;
+  color: #888;
+  margin-bottom: 5.5mm;
+}
+
+/* Section */
+.section {
+  margin-bottom: 5.5mm;
+}
+.section-title {
+  font-size: 10pt;
+  color: #6a9955;
+  font-weight: 400;
+  margin-bottom: 2.5mm;
+}
+
+/* Entry as function */
+.entry {
+  margin-bottom: 6mm;
+}
+.fn-sig {
+  font-size: 9.5pt;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 1mm;
+}
+.fn-sig .keyword {
+  color: #569cd6;
+  font-weight: 400;
+}
+.fn-sig .fname {
+  color: #dcdcaa;
+}
+.entry-date {
+  font-size: 8.5pt;
+  color: #888;
+  margin-bottom: 1.5mm;
+  padding-left: 4mm;
+}
+.entry-body {
+  padding-left: 4mm;
+  font-size: 9pt;
+  color: #333;
+  line-height: 1.45;
+}
+.entry-body li {
+  margin-bottom: 1.8mm;
+  list-style: none;
+}
+.highlight {
+  color: #d19a66;
+  font-weight: 700;
+}
+
+/* Import block for skills */
+.import-block {
+  font-size: 9pt;
+  color: #333;
+  line-height: 1.55;
+}
+.import-keyword {
+  color: #c586c0;
+}
+.import-module {
+  color: #ce9178;
+}
+.import-item {
+  color: #9cdcfe;
+}
+
+/* EOF */
+.eof {
+  margin-top: 8mm;
+  font-size: 9pt;
+  color: #aaa;
+}
+
+/* Education compact */
+.edu-entry {
+  margin-bottom: 2.5mm;
+  font-size: 9pt;
+}
+.edu-entry .school {
+  font-weight: 700;
+  color: #111;
+}
+</style>
+</head>
+<body>
+
+<!-- GUTTER with line numbers / years -->
+<div class="gutter">
+  <div class="gutter-item" style="margin-top: 0mm; height: 22mm;"></div>
+  <div class="gutter-item" style="height: 5mm;">001</div>
+  <div class="gutter-item" style="height: 40mm;"></div>
+  <div class="gutter-item" style="height: 5mm;">022</div>
+  <div class="gutter-item" style="height: 22mm;"></div>
+  <div class="gutter-item" style="height: 5mm;">036</div>
+  <div class="gutter-item" style="height: 17mm;"></div>
+  <div class="gutter-item" style="height: 5mm;">048</div>
+  <div class="gutter-item" style="height: 25mm;"></div>
+  <div class="gutter-item" style="height: 5mm;">062</div>
+  <div class="gutter-item" style="height: 20mm;"></div>
+  <div class="gutter-item" style="height: 5mm;">076</div>
+  <div class="gutter-item" style="height: 30mm;"></div>
+  <div class="gutter-item" style="height: 5mm;">099</div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- Name as comment -->
+  <img class="avatar" src="assets/avatar.png" alt="">
+  <div class="comment-name">/* 陈若岚 */</div>
+  <div class="comment-meta">// AI产品经理 · 138-0000-0000 · candidate@example.com · 北京</div>
+
+  <!-- Experience -->
+  <div class="section">
+    <div class="section-title">// EXPERIENCE</div>
+
+    <div class="entry">
+      <div class="fn-sig"><span class="keyword">fn</span> senior_ai_pm() → 星辰科技</div>
+      <div class="entry-date">// 2022.03 – present</div>
+      <div class="entry-body">
+        <li>主导企业级AI助手产品从0到1，DAU达<span class="highlight">45万</span></li>
+        <li>设计多轮对话管理框架，对话完成率提升<span class="highlight">32%</span>，NPS <span class="highlight">72</span></li>
+        <li>搭建产品数据看板体系，驱动留存率提升<span class="highlight">18%</span></li>
+        <li>协调15人跨职能团队，双周迭代交付</li>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="fn-sig"><span class="keyword">fn</span> ai_pm() → 云深智能</div>
+      <div class="entry-date">// 2020.06 – 2022.02</div>
+      <div class="entry-body">
+        <li>负责AIGC多模态内容创作平台，覆盖文本/图像/视频</li>
+        <li>定义Prompt工程规范，创作效率提升<span class="highlight">3倍</span>，模板复用率<span class="highlight">68%</span></li>
+        <li>主导增长策略，创作者<span class="highlight">1.2万→8.5万</span>（6个月）</li>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="fn-sig"><span class="keyword">fn</span> product_manager() → 锐思数据</div>
+      <div class="entry-date">// 2019.07 – 2020.05</div>
+      <div class="entry-body">
+        <li>智能推荐系统产品化，点击率提升<span class="highlight">22%</span></li>
+        <li>人均浏览时长增加<span class="highlight">4.3分钟</span></li>
+      </div>
+    </div>
+  </div>
+
+  <!-- Projects -->
+  <div class="section">
+    <div class="section-title">// PROJECTS</div>
+
+    <div class="entry">
+      <div class="fn-sig"><span class="keyword">fn</span> dialogue_engine_v2() → 星辰科技</div>
+      <div class="entry-date">// 2023.01 – 2023.06</div>
+      <div class="entry-body">
+        <li>主导对话引擎大模型架构迁移，准确率<span class="highlight">71%→93%</span></li>
+        <li>设计Fallback与人工兜底机制，客诉率下降<span class="highlight">40%</span></li>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="fn-sig"><span class="keyword">fn</span> creator_growth() → 云深智能</div>
+      <div class="entry-date">// 2021.03 – 2021.09</div>
+      <div class="entry-body">
+        <li>创作者分层运营体系，头部创作者月均产出提升<span class="highlight">2.4倍</span></li>
+      </div>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <div class="section">
+    <div class="section-title">// EDUCATION</div>
+    <div class="edu-entry"><span class="school">北京大学</span> · 人工智能 硕士 <span style="color:#888;">// 2017–2019</span></div>
+    <div class="edu-entry"><span class="school">浙江大学</span> · 计算机科学 学士 <span style="color:#888;">// 2013–2017</span></div>
+  </div>
+
+  <!-- Skills as import -->
+  <div class="section">
+    <div class="section-title">// SKILLS</div>
+    <div class="import-block">
+      <span class="import-keyword">import</span> { <span class="import-item">产品战略规划</span>, <span class="import-item">大模型应用设计</span>, <span class="import-item">PromptEng</span>, <span class="import-item">用户研究</span>, <span class="import-item">数据分析</span>, <span class="import-item">A/B实验</span>, <span class="import-item">Figma</span>, <span class="import-item">SQL</span>, <span class="import-item">Python</span> } <span class="import-keyword">from</span> <span class="import-module">"candidate"</span>
+    </div>
+  </div>
+
+  <!-- EOF -->
+  <div class="eof">// EOF</div>
+
+  <img style="position:absolute; bottom:10mm; right:14mm; width:12mm; height:12mm; border-radius:2px;" src="assets/qr.png" alt="">
+
+</div>
+
+</body>
+</html>

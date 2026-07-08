@@ -1,0 +1,47 @@
+{
+  "template_id": "editorial",
+  "display_name": "Editorial",
+  "status": "admitted",
+  "style_direction": "Magazine/editorial typography with left sidebar for quick-scan info and right main column for narrative",
+  "intended_users": [
+    "Design and strategy roles",
+    "Mid-level candidates (3-5 years)",
+    "Candidates who want a clean, typography-driven aesthetic"
+  ],
+  "locked_layout_rules": [
+    "A4 portrait, one page, zero print margin",
+    "PingFang SC font family",
+    "CSS Grid dual-column layout (sidebar 62mm + main)",
+    "Full-width header with name/meta/avatar",
+    "No color highlights — hierarchy through weight and size only",
+    "Pure black-gray color system (#111 / #555 / #999)",
+    "Main content bottom whitespace must not exceed 15%"
+  ],
+  "component_slots": [
+    "header (name, meta, avatar)",
+    "sidebar: education, core skills (tag layout), qr",
+    "main: intro, experience entries, project entries"
+  ],
+  "component_diy_policy": {
+    "ai_may_decide": [
+      "Whether sidebar includes certificates, languages, or tools",
+      "Whether to add campus/volunteer experience in sidebar or main",
+      "Which skill tags to include",
+      "Section title naming"
+    ],
+    "ai_must_not": [
+      "Add color highlights (design is monochrome)",
+      "Move internship into project section",
+      "Invent facts or metrics",
+      "Break the dual-column grid"
+    ]
+  },
+  "qa_gates": [
+    "pdfinfo: one page, A4 portrait",
+    "pdffonts: PingFang expected",
+    "pdftotext: logical reading order",
+    "bottom whitespace <= 15%",
+    "no sensitive or stale terms",
+    "screenshot: no overlap, clipping, or collision"
+  ]
+}

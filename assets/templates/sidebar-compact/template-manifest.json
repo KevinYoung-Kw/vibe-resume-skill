@@ -1,0 +1,48 @@
+{
+  "template_id": "sidebar-compact",
+  "display_name": "Sidebar Compact",
+  "status": "admitted",
+  "style_direction": "Dark sidebar with personal info/skills/education, white main body for narrative experiences",
+  "intended_users": [
+    "Technical product managers",
+    "AI/data/engineering candidates",
+    "High information density resumes",
+    "Campus and early-career candidates with strong technical skills"
+  ],
+  "locked_layout_rules": [
+    "A4 portrait, one page, zero print margin",
+    "PingFang SC font family",
+    "CSS Grid two-column layout (sidebar 58mm dark + main white)",
+    "Sidebar background: #1a1f2e with light text",
+    "Main body: white with slate/blue accent system",
+    "Avatar large and centered in sidebar",
+    "Skills displayed as tags with subtle borders",
+    "Main content bottom whitespace must not exceed 15%"
+  ],
+  "component_slots": [
+    "sidebar: avatar, name, tagline, contact, education, skills (tags), qr",
+    "main: intro, internship entries, project entries"
+  ],
+  "component_diy_policy": {
+    "ai_may_decide": [
+      "Whether sidebar includes certificates or language ability",
+      "Whether to add tools section in sidebar or merge with skills",
+      "Section title naming in main body",
+      "Whether projects appear as separate section or merged with experience"
+    ],
+    "ai_must_not": [
+      "Change sidebar dark color scheme",
+      "Move internship into project section",
+      "Invent facts or metrics",
+      "Break the two-column grid or overflow sidebar"
+    ]
+  },
+  "qa_gates": [
+    "pdfinfo: one page, A4 portrait",
+    "pdffonts: PingFang expected",
+    "pdftotext: logical reading order preserved",
+    "bottom whitespace <= 15%",
+    "no sensitive or stale terms",
+    "screenshot: no overlap, clipping, sidebar/main collision"
+  ]
+}

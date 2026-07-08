@@ -1,0 +1,51 @@
+{
+  "template_id": "basic-a4",
+  "display_name": "Basic A4",
+  "status": "baseline",
+  "style_direction": "Chinese AI/product resume baseline",
+  "intended_users": [
+    "AI product candidates",
+    "technical product candidates",
+    "campus and early-career candidates with internship/project evidence"
+  ],
+  "locked_layout_rules": [
+    "A4 portrait, one page, zero print margin",
+    "PingFang SC font family first",
+    "white page with blue/gray hierarchy",
+    "name/meta/header at top, avatar at top-right",
+    "right-aligned date column",
+    "main sections follow recruiter reading order",
+    "main content bottom whitespace must not exceed 15%"
+  ],
+  "component_slots": [
+    "header",
+    "intro",
+    "education",
+    "internship",
+    "project_or_personal_experience",
+    "core_abilities",
+    "footer_qr"
+  ],
+  "component_diy_policy": {
+    "ai_may_decide": [
+      "optional section titles",
+      "whether to add campus experience, certificates, language ability, portfolio links, competitions, or tool chain content",
+      "whether optional content becomes its own section or is merged into another section",
+      "which verified result receives highlight"
+    ],
+    "ai_must_not": [
+      "invent facts or metrics",
+      "move internship work into project experience",
+      "break the template grid or visual hierarchy",
+      "use optional components as filler"
+    ]
+  },
+  "qa_gates": [
+    "pdfinfo: one page, A4 portrait",
+    "pdffonts: expected Chinese font handling",
+    "pdftotext: logical reading order",
+    "bottom whitespace <= 15%",
+    "no sensitive or stale terms",
+    "screenshot: no overlap, clipping, or QR collision"
+  ]
+}

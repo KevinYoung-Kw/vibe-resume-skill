@@ -1,0 +1,48 @@
+{
+  "template_id": "timeline-grid",
+  "display_name": "Timeline Grid",
+  "status": "admitted",
+  "style_direction": "Vertical timeline spine with entry nodes, education in header meta, skills as bottom pills",
+  "intended_users": [
+    "Campus and early-career candidates",
+    "Candidates wanting to show growth trajectory",
+    "AI/product/technical roles"
+  ],
+  "locked_layout_rules": [
+    "A4 portrait, one page, zero print margin",
+    "PingFang SC font family",
+    "Left timeline spine with dot nodes",
+    "Header: avatar + name + education meta",
+    "Intro block with top/bottom border",
+    "Footer: skill pills + QR",
+    "Main content bottom whitespace must not exceed 15%"
+  ],
+  "component_slots": [
+    "header (avatar, name, education meta, contact)",
+    "intro",
+    "timeline sections (internship, project, education/honors)",
+    "footer (skill pills, qr)"
+  ],
+  "component_diy_policy": {
+    "ai_may_decide": [
+      "Whether education details appear only in header or also in timeline",
+      "Whether to add campus/volunteer section in timeline",
+      "Skill pill grouping and ordering",
+      "Section title naming"
+    ],
+    "ai_must_not": [
+      "Remove or hide the timeline spine",
+      "Move internship into project section",
+      "Invent facts or metrics",
+      "Break the single-column timeline layout"
+    ]
+  },
+  "qa_gates": [
+    "pdfinfo: one page, A4 portrait",
+    "pdffonts: PingFang expected",
+    "pdftotext: logical reading order",
+    "bottom whitespace <= 15%",
+    "no sensitive or stale terms",
+    "screenshot: no overlap, timeline nodes aligned"
+  ]
+}
