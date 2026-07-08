@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>陈若岚 - bauhaus 简历模板</title>
+  <style>
+    @page { size: A4; margin: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      margin: 0; padding: 0;
+      background: #f5f5f0;
+      font-family: "PingFang SC", "PingFangSC-Regular", -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .page {
+      position: relative;
+      width: 210mm;
+      height: 297mm;
+      overflow: hidden;
+      background: #ffffff;
+      color: #2a2a2a;
+      padding: 9mm 10mm 9mm 10mm;
+    }
+    /* Header */
+    .header {
+      display: flex;
+      align-items: flex-start;
+      gap: 5mm;
+      margin-bottom: 5mm;
+    }
+    .header-left {
+      flex: 1;
+    }
+    .name {
+      font-size: 38pt;
+      font-weight: 900;
+      line-height: 1.05;
+      color: #1a1a1a;
+      letter-spacing: -0.5pt;
+    }
+    .subtitle {
+      font-size: 9.5pt;
+      font-weight: 300;
+      color: #666;
+      line-height: 1.6;
+      margin-top: 2mm;
+    }
+    .subtitle .sep {
+      color: #ccc;
+    }
+    .avatar {
+      width: 22mm;
+      height: 29mm;
+      object-fit: cover;
+      object-position: center;
+    }
+    /* Geometric accents */
+    .geo-circle {
+      display: inline-block;
+      width: 3.5mm;
+      height: 3.5mm;
+      border-radius: 50%;
+      background: #e63946;
+      margin-right: 2mm;
+      vertical-align: middle;
+    }
+    .geo-square {
+      display: inline-block;
+      width: 3.2mm;
+      height: 3.2mm;
+      background: #2563eb;
+      margin-right: 2mm;
+      vertical-align: middle;
+    }
+    .geo-triangle {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: 2mm solid transparent;
+      border-right: 2mm solid transparent;
+      border-bottom: 3.5mm solid #f5b301;
+      margin-right: 2mm;
+      vertical-align: middle;
+    }
+    /* Red bar accent top-left */
+    .page::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4mm;
+      height: 45mm;
+      background: #e63946;
+    }
+    /* Yellow block bottom-left */
+    .page::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 30mm;
+      height: 4mm;
+      background: #f5b301;
+    }
+    /* Blue corner accent */
+    .blue-accent {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 18mm;
+      height: 4mm;
+      background: #2563eb;
+    }
+    /* Section titles */
+    .section-title {
+      font-size: 11pt;
+      font-weight: 900;
+      color: #1a1a1a;
+      margin-top: 4mm;
+      margin-bottom: 2.5mm;
+      display: flex;
+      align-items: center;
+    }
+    /* Intro */
+    .intro {
+      font-size: 9pt;
+      font-weight: 300;
+      line-height: 1.65;
+      color: #444;
+      margin-bottom: 2mm;
+      padding-left: 5.5mm;
+    }
+    .intro .lead {
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+    /* Entries */
+    .entry {
+      margin-bottom: 2.5mm;
+      padding-left: 5.5mm;
+    }
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.5mm;
+    }
+    .entry-title {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+    .entry-date {
+      font-size: 8pt;
+      font-weight: 300;
+      color: #999;
+      white-space: nowrap;
+    }
+    .entry-sub {
+      font-size: 8.5pt;
+      font-weight: 400;
+      color: #555;
+      margin-bottom: 0.5mm;
+    }
+    .entry-body {
+      font-size: 8.5pt;
+      font-weight: 300;
+      line-height: 1.55;
+      color: #444;
+      text-align: justify;
+    }
+    .entry-body .highlight {
+      font-weight: 600;
+      color: #e63946;
+    }
+    /* Skills */
+    .skills-block {
+      padding-left: 5.5mm;
+      font-size: 8.2pt;
+      font-weight: 300;
+      line-height: 1.7;
+      color: #444;
+    }
+    .skills-block strong {
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+    /* Education detail */
+    .edu-detail {
+      font-size: 8.2pt;
+      font-weight: 300;
+      line-height: 1.55;
+      color: #555;
+      margin-top: 0.5mm;
+    }
+    /* QR */
+    .qr-block {
+      position: absolute;
+      right: 10mm;
+      bottom: 12mm;
+      text-align: center;
+    }
+    .qr-block img {
+      width: 15mm;
+      height: 15mm;
+      object-fit: contain;
+    }
+    .qr-block .qr-label {
+      font-size: 6pt;
+      font-weight: 300;
+      color: #aaa;
+      margin-top: 1mm;
+    }
+    /* Geometric separator */
+    .geo-sep {
+      display: flex;
+      align-items: center;
+      gap: 2mm;
+      margin: 3mm 0 1mm 0;
+    }
+    .geo-sep .dot-r { width: 2mm; height: 2mm; border-radius: 50%; background: #e63946; }
+    .geo-sep .dot-b { width: 2mm; height: 2mm; background: #2563eb; }
+    .geo-sep .dot-y { width: 0; height: 0; border-left: 1.2mm solid transparent; border-right: 1.2mm solid transparent; border-bottom: 2mm solid #f5b301; }
+    .geo-sep .line { flex: 1; height: 0.3pt; background: #e0e0e0; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="blue-accent"></div>
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="header-left">
+        <div class="name">陈若岚</div>
+        <div class="subtitle">
+          软件工程 <span class="sep">·</span> 意向：AI 产品 / 数据产品 / 增长产品<br>
+          138-0000-0000 <span class="sep">·</span> candidate@example.com <span class="sep">·</span> example.com
+        </div>
+      </div>
+      <img class="avatar" src="assets/avatar.png" alt="">
+    </div>
+
+    <!-- INTRO -->
+    <div class="section-title"><span class="geo-circle"></span>个人介绍</div>
+    <p class="intro">
+      <span class="lead">技术与业务理解兼具的产品候选人，擅长把复杂问题拆成可验证的原型和数据指标。</span>过往在 AI 应用、内容增长与内部工具项目中，能够从用户场景出发完成需求分析、原型设计、实验验证和交付跟进。
+    </p>
+
+    <!-- EDUCATION -->
+    <div class="geo-sep"><span class="dot-r"></span><span class="dot-b"></span><span class="dot-y"></span><span class="line"></span></div>
+    <div class="section-title"><span class="geo-square"></span>教育经历</div>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">岭南科技大学 · 软件工程 · 本科</span>
+        <span class="entry-date">2022.09 – 2026.06</span>
+      </div>
+      <div class="edu-detail">
+        GPA 3.8/5.0（专业前 10%） · 主修数据结构、数据库系统、人机交互、软件工程、机器学习基础、产品设计方法<br>
+        荣誉：校级一等奖学金、创新创业竞赛金奖 · CET-6 540
+      </div>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="geo-sep"><span class="dot-b"></span><span class="dot-y"></span><span class="dot-r"></span><span class="line"></span></div>
+    <div class="section-title"><span class="geo-triangle"></span>实习经历</div>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">云杉科技 · AI 应用产品经理</span>
+        <span class="entry-date">2025.06 – 2026.03</span>
+      </div>
+      <div class="entry-sub">智能检索助手｜从需求分析到原型验证</div>
+      <div class="entry-body">
+        面向企业知识库"搜得到但难以定位"的问题，负责检索入口、结果聚合、答案引用与反馈链路设计；输出 PRD、Figma 原型和可交互 Demo，推动方案进入研发排期，验证<span class="highlight">搜索定位效率提升</span>的核心路径。
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-sub">模型效果评测｜指标体系与 Badcase 归因</div>
+      <div class="entry-body">
+        搭建覆盖准确性、可读性、引用一致性的评测表，整理 300+ 条典型 Case，与算法同学复盘回答偏差原因；通过 Prompt 调优和样本分层，使核心场景通过率从 72% 提升至 <span class="highlight">86%</span>。
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">南湾内容科技 · 内容增长产品助理</span>
+        <span class="entry-date">2025.01 – 2025.05</span>
+      </div>
+      <div class="entry-sub">创作者数据看板｜指标拆解与运营提效</div>
+      <div class="entry-body">
+        针对运营团队手工汇总慢的问题，梳理内容曝光、点击、转化和留存指标，设计看板字段与筛选方式；上线后将周报整理时间从 4h 缩短至 <span class="highlight">40min</span>，支持 20+ 位创作者复盘内容表现。
+      </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="geo-sep"><span class="dot-y"></span><span class="dot-r"></span><span class="dot-b"></span><span class="line"></span></div>
+    <div class="section-title"><span class="geo-circle"></span>项目经历</div>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">校园 AI 助手 · Agent Workflow 原型</span>
+        <span class="entry-date">2025.03 – 2025.06</span>
+      </div>
+      <div class="entry-body">
+        围绕学生事务咨询高频问题，设计"问题识别 - 知识检索 - 表单引导 - 人工转接"流程，使用低代码工具搭建可演示原型；30 人试用中收集反馈，沉淀 FAQ、异常兜底与流程优化清单。
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">数据分析课程项目 · 用户流失预测</span>
+        <span class="entry-date">2024.09 – 2024.12</span>
+      </div>
+      <div class="entry-body">
+        基于公开数据集完成用户行为清洗、特征构造和预测建模，并把模型结果转译为产品策略建议；输出分析报告和可视化仪表盘，获课程优秀评级。
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="geo-sep"><span class="dot-r"></span><span class="dot-b"></span><span class="dot-y"></span><span class="line"></span></div>
+    <div class="section-title"><span class="geo-square"></span>核心能力</div>
+    <div class="skills-block">
+      <strong>AI 产品：</strong>需求分析、Prompt / Context 工程、Agent Workflow、模型评测、Badcase 归因、搜索体验优化<br>
+      <strong>产品交付：</strong>PRD / Figma / 用户访谈 / 竞品分析 / 指标拆解 / 版本回归，能跟进需求从评审到上线<br>
+      <strong>数据工具：</strong>SQL / Python / Excel / 可视化看板，能完成数据清洗、指标分析和实验复盘<br>
+      <strong>工具链：</strong>Claude Code / Cursor / Obsidian，熟悉用 AI 编程和知识库工具完成原型、调研与文档沉淀
+    </div>
+
+    <!-- QR -->
+    <div class="qr-block">
+      <img src="assets/qr.png" alt="">
+      <div class="qr-label">作品集二维码</div>
+    </div>
+  </main>
+</body>
+</html>
