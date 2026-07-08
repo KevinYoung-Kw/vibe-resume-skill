@@ -162,7 +162,7 @@ CC BY-NC 4.0 — 个人使用随意，商用请联系作者。
 ---
 
 <p align="center">
-  <img src="assets/cola-logo.png" height="48" alt="Cola">
+  <img src="assets/cola-logo.png" height="72" alt="Cola">
 </p>
 
 <p align="center">
@@ -171,6 +171,6 @@ CC BY-NC 4.0 — 个人使用随意，商用请联系作者。
 </p>
 
 <p align="center">
-  <img src="assets/wechat-qr.jpg" width="160" alt="公众号：水的实践说"><br>
+  <img src="assets/wechat-qr.jpg" width="220" alt="公众号：水的实践说"><br>
   <sub>关注公众号「水的实践说」获取更多 AI 实践内容</sub>
 </p>
