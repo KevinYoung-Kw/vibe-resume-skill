@@ -76,17 +76,40 @@ These constraints override template defaults. They apply to every template in th
 
 ## Recommended Workflow
 
-### Step 1: Template and Style Lock
+### Step 1: Template Selection
 
-Before changing content, inspect the template or existing resume:
+**先让用户选模板，再开始写内容。**
 
-- Page size: A4 portrait unless the user asks otherwise.
-- Font: usually `PingFang SC` for Chinese resumes.
-- Color hierarchy: primary blue, dark title gray, body gray, light muted gray.
-- Structural modules: name/meta, avatar, personal intro, education, internships, projects, core abilities, QR/footer.
-- Component positions: section titles, horizontal rules, date alignment, body indent, avatar and QR positions.
+1. 向用户展示可用模板列表（名称 + 一句话风格描述），让用户指定：
 
-For an existing HTML template, edit the source HTML/CSS directly. Avoid rebuilding the layout from scratch unless the template is broken beyond repair.
+   | 模板 | 风格 |
+   |------|------|
+   | basic-a4（默认） | 经典单栏，ATS 友好，适合所有场景 |
+   | editorial | 双栏 Grid，字重层级分明 |
+   | sidebar-compact | 深色侧栏，辨识度高 |
+   | timeline-grid | 时间轴叙事，适合经历丰富 |
+   | minimal-prose | Stripe 极简，留白即设计 |
+   | corporate-classic | 外企极简，纯黑白，内容为王 |
+   | gov-red | 党政风，庄重规范，适合国企/事业单位 |
+   | mono-raw | Brutalist 风，工具即美学 |
+   | code-poetry | 源代码隐喻，极客风 |
+   | swiss-neue | 瑞士主义，隐形网格，克制优雅 |
+   | bauhaus | 包豪斯几何，三原色点缀 |
+
+2. 如果用户没有明确偏好，默认使用 **basic-a4**。
+3. 用户确认后，锁定模板，不再中途切换（除非用户主动要求）。
+
+### Step 1.5: Style Lock
+
+模板确定后，检查并锁定视觉参数：
+
+- 页面尺寸：A4 竖版（除非用户另行要求）
+- 字体：通常为 PingFang SC
+- 色彩层级：主色、标题深灰、正文灰、辅助浅灰
+- 结构模块：姓名/信息、头像、个人介绍、教育经历、实习/工作经历、项目经历、核心能力、二维码
+- 组件位置：标题、分割线、日期对齐、正文缩进、头像和二维码位置
+
+对于已有 HTML 模板，直接编辑源文件。除非模板已经无法修复，否则不要从零重建布局。
 
 ### Step 2: Fact Extraction and Filtering
 

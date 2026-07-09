@@ -4,9 +4,9 @@
 
 **Stop formatting. Start vibing.**
 
-用 Vibe Coding 的方式做简历:你只管说,AI 负责排版、适配、导出--全部。
+用 Vibe Coding 的方式做简历：你只管说，AI 负责排版、适配、导出——全部。
 
-11 套 A4 模板,纯 HTML/CSS,零依赖。这不是模板集,是给 AI 编程助手用的 **Skill 指令文件**。
+11 套 A4 模板，纯 HTML/CSS，零依赖。这不是模板集，是给 AI 编程助手用的 **Skill 指令文件**。
 
 ![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-555555?style=flat-square) ![Skill](https://img.shields.io/badge/Skill-Agent-555555?style=flat-square) ![HTML Resume](https://img.shields.io/badge/HTML-Resume-555555?style=flat-square) ![Claude Code](https://img.shields.io/badge/Claude%20Code-Supported-2ea44f?style=flat-square) ![Codex](https://img.shields.io/badge/Codex-Supported-2ea44f?style=flat-square) ![Cola](https://img.shields.io/badge/Cola-Supported-2ea44f?style=flat-square) ![Cursor](https://img.shields.io/badge/Cursor-Supported-2ea44f?style=flat-square)
 
@@ -17,17 +17,17 @@
 ## 🔥 30 秒理解这是什么
 
 ```
-你:帮我用 swiss-neue 写简历,经历如下......
-AI:✅ 生成 HTML + 导出 PDF(自动排版、密度适配、QA 通过)
+你：帮我用 swiss-neue 写简历，经历如下……
+AI：✅ 生成 HTML + 导出 PDF（自动排版、密度适配、QA 通过）
 
-你:底部太空了,内容排版再紧凑一些
-AI:✅ 字号行高调大,重新导出
+你：底部太空了，内容排版再紧凑一些
+AI：✅ 字号行高调大，重新导出
 
-你:帮我改成数据产品方向,再出一版
-AI:✅ 保留风格,重组内容侧重,新 PDF 已生成
+你：帮我改成数据产品方向，再出一版
+AI：✅ 保留风格，重组内容侧重，新 PDF 已生成
 
-你:这段实习加上去
-AI:✅ 插入内容,自动适配间距
+你：这段实习加上去
+AI：✅ 插入内容，自动适配间距
 ```
 
 **你不碰排版。你不调间距。你不换字号。你只说人话。**
@@ -38,10 +38,10 @@ AI:✅ 插入内容,自动适配间距
 
 | 痛点 | 传统做法 | Vibe Resume |
 |------|---------|-------------|
-| 从 0 写简历 | 3 小时写内容,2 小时调排版 | 说几句话,AI 全搞定 |
+| 从 0 写简历 | 3 小时写内容，2 小时调排版 | 说几句话，AI 全搞定 |
 | 改投不同 JD | 手动改 5 遍 | AI 根据 JD 批量生成 N 个版本 |
-| 更新一段经历 | 打开 Word,调间距,改分页 | "加上这段",完事 |
-| 想换风格 | 重新做一份 | "换成 mono-raw",3 秒切换 |
+| 更新一段经历 | 打开 Word，调间距，改分页 | "加上这段"，完事 |
+| 想换风格 | 重新做一份 | "换成 mono-raw"，3 秒切换 |
 
 ---
 
@@ -85,23 +85,23 @@ AI:✅ 插入内容,自动适配间距
 
 ## 🚀 安装与使用
 
-### 方式一:让 AI 帮你安装(最简单)
+### 方式一：让 AI 帮你安装（最简单）
 
-直接把这个链接丢给你的 AI 编程助手:
+直接把这个链接丢给你的 AI 编程助手：
 
 ```
 https://github.com/KevinYoung-Kw/vibe-resume-skill
 ```
 
-然后说:
+然后说：
 
-> "帮我安装这个 Skill,然后用它帮我写简历"
+> "帮我安装这个 Skill，然后用它帮我写简历"
 
 AI 会自动 clone 并放到正确的 skills 目录下。
 
-### 方式二:手动安装
+### 方式二：手动安装
 
-根据你使用的 AI 工具,复制到对应目录:
+根据你使用的 AI 工具，复制到对应目录：
 
 ```bash
 # Clone
@@ -119,7 +119,7 @@ cp -r vibe-resume-skill .cursor/skills/vibe-resume-skill
 
 安装后对 AI 说任何关于简历的事即可触发。
 
-### 方式三:直接用模板(不装 Skill)
+### 方式三：直接用模板（不装 Skill）
 
 ```bash
 open assets/templates/swiss-neue/resume.html
@@ -130,15 +130,15 @@ open assets/templates/swiss-neue/resume.html
 
 ## 🛡️ AI 内置硬约束
 
-SKILL.md 里写了一套 **Layout Hard Constraints**,AI 生成时自动遵守:
+SKILL.md 里写了一套 **Layout Hard Constraints**，AI 生成时自动遵守：
 
-- ✅ 页边距 ≤ 10mm - 内容占满页面,不允许两边空旷
-- ✅ 密度自适应 - 内容少则字号行高自动放大;内容多则间距收紧
-- ✅ 底部空白 ≤ 15% - 超过即 QA 失败,必须调整
+- ✅ 页边距 ≤ 10mm - 内容占满页面，不允许两边空旷
+- ✅ 密度自适应 - 内容少则字号行高自动放大；内容多则间距收紧
+- ✅ 底部空白 ≤ 15% - 超过即 QA 失败，必须调整
 - ✅ 头像零装饰 - 无边框、无圆角、无阴影、保持原色
 - ✅ QR 不遮挡 - 二维码必须 100% 可见
 
-**结果:无论谁用,出来的排版质量是稳定的。**
+**结果：无论谁用，出来的排版质量是稳定的。**
 
 ![Print-ready QA](assets/demos/qa.gif)
 
@@ -146,11 +146,11 @@ SKILL.md 里写了一套 **Layout Hard Constraints**,AI 生成时自动遵守:
 
 ## 🎨 设计哲学
 
-> 设计感在骨架里,不在皮肤上。
+> 设计感在骨架里，不在皮肤上。
 
 - **结构即设计** - 排版逻辑本身就是视觉表达
-- **字重是层级系统** - 700 / 600 / 450 / 400,四级够用
-- **高亮是语义标记** - 蓝色 = 核心成果,不是装饰
+- **字重是层级系统** - 700 / 600 / 450 / 400，四级够用
+- **高亮是语义标记** - 蓝色 = 核心成果，不是装饰
 - **间距是呼吸节奏** - section / entry / line 三层韵律
 - **克制胜过张扬** - 留白说的话比色块响亮
 
@@ -172,13 +172,13 @@ vibe-resume-skill/
 
 ## 🤝 Contributing
 
-欢迎提交新模板方向。请遵循 `references/template-expansion.md` 中的准入流程--新模板必须通过全页截图 QA 和与 baseline 的对比审查。
+欢迎提交新模板方向。请遵循 `references/template-expansion.md` 中的准入流程——新模板必须通过全页截图 QA 和与 baseline 的对比审查。
 
 ---
 
 ## 📄 License
 
-CC BY-NC 4.0 - 个人使用随意,商用请联系作者。
+CC BY-NC 4.0 — 个人使用随意，商用请联系作者。
 
 ---
 
