@@ -22,7 +22,8 @@ DEFAULT_FORBIDDEN_TERMS = [
 
 STRICT_FINAL_FORBIDDEN_TERMS = [
     "示例候选人",
-    "陈若岚",
+    "某 AI 应用团队",
+    "某内容增长团队",
     "138-0000-0000",
     "candidate@example.com",
     "example.com",

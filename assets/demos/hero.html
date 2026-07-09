@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1200, initial-scale=1">
+  <title>Vibe Resume Demo - Hero</title>
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body data-demo="hero" data-duration="11">
+  <main class="stage">
+    <section class="layout two-col">
+      <aside class="chat-panel panel">
+        <div class="chat-title">
+          <span>Vibe Resume Skill</span>
+          <span class="dot-row"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span>
+        </div>
+        <div class="message user">帮我生成一份一页 AI 产品简历。</div>
+        <div class="message ai">收到。读取经历，按 basic-a4 模板生成 HTML。</div>
+        <div class="message user">这段经历换成智能搜索项目。</div>
+        <div class="message ai">已定位经历块，改 HTML 并重新检查 PDF。</div>
+        <div class="status-stack">
+          <div class="status-row"><b>内容</b><span>STAR 文案重写</span><i class="check">✓</i></div>
+          <div class="status-row"><b>版式</b><span>一页 A4 密度适配</span><i class="check">✓</i></div>
+          <div class="status-row"><b>交付</b><span>HTML → PDF</span><i class="check">✓</i></div>
+        </div>
+      </aside>
+
+      <section class="workbench panel">
+        <div class="window-bar">
+          <span class="tab">resume.html + basic-a4 preview</span>
+          <span>自然语言改简历，HTML 直接同步。</span>
+        </div>
+        <div class="compose-stage">
+          <div class="flow-path"><span class="flow-dot"></span></div>
+          <div class="intent-chip">AI 正在把自然语言编译成简历</div>
+
+          <div class="resume-focus">
+            <div class="resume-shot hero-shot">
+              <iframe class="resume-frame" src="../templates/basic-a4/resume.html" title="basic-a4 HTML resume template" scrolling="no"></iframe>
+              <div class="resume-update-region">
+                <b>智能搜索项目｜Vibe Coding Demo</b>
+                <span>从 PRD 到可交互 Demo，推动搜索方案发布迭代。</span>
+              </div>
+              <div class="template-glow"></div>
+              <div class="scan-line"></div>
+            </div>
+          </div>
+
+          <section class="snippet-card">
+            <div class="snippet-top">
+              <span>resume.html</span>
+              <b>只改这一段</b>
+            </div>
+            <div class="code-lines">
+              <div class="code-line"><span class="ln">01</span><span class="code-text">&lt;main class="page"&gt;</span></div>
+              <div class="code-line"><span class="ln">02</span><span class="code-text">&lt;section class="internship"&gt;</span></div>
+              <div class="code-line replace-target"><span class="ln">03</span><span class="code-text"><span class="old-code">智能检索助手｜原型验证</span><span class="new-code">智能搜索项目｜Vibe Coding Demo</span></span></div>
+              <div class="code-line replace-target"><span class="ln">04</span><span class="code-text"><span class="old-code">检索入口、结果聚合、反馈链路...</span><span class="new-code">PRD 到 Demo，推动方案发布迭代。</span></span></div>
+              <div class="code-line"><span class="ln">05</span><span class="code-text">&lt;/section&gt;</span></div>
+              <div class="code-cursor"></div>
+            </div>
+          </section>
+        </div>
+        <div class="pdf-badge"><span class="pdf-icon">PDF</span><span>可直接投递</span></div>
+      </section>
+    </section>
+    <div class="footer-note">先生成 HTML 简历，再按自然语言局部修改，最后导出并检查可投递 PDF。</div>
+  </main>
+  <script src="demo.js"></script>
+</body>
+</html>
