@@ -8,9 +8,9 @@
 
 11 套 A4 模板,纯 HTML/CSS,零依赖。这不是模板集,是给 AI 编程助手用的 **Skill 指令文件**。
 
-![AI 生成并修改 HTML 简历](assets/demos/hero.gif)
-
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+
+![AI 生成并修改 HTML 简历](assets/demos/hero.gif)
 
 ---
 
