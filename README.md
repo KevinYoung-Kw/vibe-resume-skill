@@ -8,7 +8,7 @@
 
 11 套 A4 模板,纯 HTML/CSS,零依赖。这不是模板集,是给 AI 编程助手用的 **Skill 指令文件**。
 
-![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey?style=flat-square)![Skill](https://img.shields.io/badge/Skill-Agent-111111?style=flat-square)![HTML Resume](https://img.shields.io/badge/HTML-Resume-0A7CFF?style=flat-square)![Claude Code](https://img.shields.io/badge/Claude%20Code-Supported-6B5B95?style=flat-square)![Codex](https://img.shields.io/badge/Codex-Supported-222222?style=flat-square)![Cola](https://img.shields.io/badge/Cola-Supported-FF6B35?style=flat-square)![Cursor](https://img.shields.io/badge/Cursor-Supported-007ACC?style=flat-square)
+![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-555555?style=flat-square) ![Skill](https://img.shields.io/badge/Skill-Agent-555555?style=flat-square) ![HTML Resume](https://img.shields.io/badge/HTML-Resume-555555?style=flat-square) ![Claude Code](https://img.shields.io/badge/Claude%20Code-Supported-2ea44f?style=flat-square) ![Codex](https://img.shields.io/badge/Codex-Supported-2ea44f?style=flat-square) ![Cola](https://img.shields.io/badge/Cola-Supported-2ea44f?style=flat-square) ![Cursor](https://img.shields.io/badge/Cursor-Supported-2ea44f?style=flat-square)
 
 ![AI 生成并修改 HTML 简历](assets/demos/hero.gif)
 
