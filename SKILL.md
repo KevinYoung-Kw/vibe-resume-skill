@@ -137,8 +137,22 @@ For a one-page A4 resume, use absolute-positioned blocks only when preserving a 
 The selected template owns the structure; AI owns the component choice inside allowed slots.
 
 - Keep the default backbone unless the template contract says otherwise: header, intro, education, internship, project or personal experience, core abilities, footer/QR.
-- AI may add, remove, rename, or merge optional components such as `社团经历`, `校园经历`, `证书`, `语言能力`, `工具链`, `作品集`, or `竞赛经历` when that improves the candidate's story.
+- AI may add, remove, rename, or merge optional sections when that improves the candidate's story.
 - AI should decide whether optional content deserves its own section or should be merged into education/core abilities/project experience.
+
+**Available section titles** (pick what fits the candidate; do not use all):
+
+| Category | Section titles |
+|----------|---------------|
+| Core (almost always present) | 个人介绍 · 教育经历 · 核心能力 |
+| Experience | 实习经历 · 工作经历 · 项目经历 · 个人项目 |
+| Campus / Student | 校园经历 · 社团经历 · 学生工作 · 志愿服务 |
+| Achievements | 竞赛经历 · 获奖情况 · 荣誉奖项 |
+| Skills & Certs | 专业技能 · 工具链 · 语言能力 · 证书/资格 |
+| Portfolio | 作品集 · 开源贡献 · 个人博客 |
+| Other | 兴趣爱好 · 自我评价 · 培训经历 · 科研经历 · 发表论文 |
+
+Naming rule: use the title that most honestly describes the content. 已正式入职的用「工作经历」，在校生用「实习经历」；有社团管理经验的单独列「社团经历」，没有就不硬凑。
 - Component DIY is not a reason to invent facts, add weak filler, or move internship work into project experience.
 - Do not spawn separate agents for individual resume components. Use subagents for template style research/implementation, then let the main resume-building pass fill components.
 
