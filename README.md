@@ -47,37 +47,9 @@ AI：✅ 插入内容，自动适配间距
 
 ## 📋 11 套模板
 
-### 实用系
+适合直接投递的正式简历，设计克制、信息密度高、ATS 友好；也保留少量更有表达欲的个性模板。
 
-适合直接投递的正式简历，设计克制、信息密度高、ATS 友好。
-
-<table>
-<tr>
-<td align="center"><img src="assets/previews/basic-a4.jpg" width="160"><br><b>basic-a4</b><br><sub>经典单栏 · ATS 友好</sub></td>
-<td align="center"><img src="assets/previews/editorial.jpg" width="160"><br><b>editorial</b><br><sub>双栏 Grid · 字重层级</sub></td>
-<td align="center"><img src="assets/previews/sidebar-compact.jpg" width="160"><br><b>sidebar-compact</b><br><sub>深色侧栏 · 高辨识度</sub></td>
-<td align="center"><img src="assets/previews/timeline-grid.jpg" width="160"><br><b>timeline-grid</b><br><sub>时间轴 · 成长叙事</sub></td>
-</tr>
-<tr>
-<td align="center"><img src="assets/previews/minimal-prose.jpg" width="160"><br><b>minimal-prose</b><br><sub>Stripe 极简 · 留白即设计</sub></td>
-<td align="center"><img src="assets/previews/corporate-classic.jpg" width="160"><br><b>corporate-classic</b><br><sub>外企极简 · 纯黑白 · 内容为王</sub></td>
-<td align="center"><img src="assets/previews/gov-red.jpg" width="160"><br><b>gov-red</b><br><sub>党政风 · 庄重规范</sub></td>
-<td></td>
-</tr>
-</table>
-
-### 个性系
-
-个人觉得好玩的方向——设计语言完整、概念自洽，适合想表达点什么的人。
-
-<table>
-<tr>
-<td align="center"><img src="assets/previews/mono-raw.jpg" width="160"><br><b>mono-raw</b><br><sub>Brutalist · 工具即美学</sub></td>
-<td align="center"><img src="assets/previews/code-poetry.jpg" width="160"><br><b>code-poetry</b><br><sub>源代码隐喻 · 极客风</sub></td>
-<td align="center"><img src="assets/previews/swiss-neue.jpg" width="160"><br><b>swiss-neue</b><br><sub>瑞士主义 · 隐形网格</sub></td>
-<td align="center"><img src="assets/previews/bauhaus.jpg" width="160"><br><b>bauhaus</b><br><sub>包豪斯几何 · 三原色点缀</sub></td>
-</tr>
-</table>
+![11 套 A4 HTML 简历模板总览](assets/previews/template-gallery.jpg)
 
 每套模板都有完整的设计语言：加粗=层级、高亮=成果、浅色=辅助、间距=呼吸。不是随便配色就叫"模板"。
 
