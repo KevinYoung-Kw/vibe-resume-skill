@@ -52,7 +52,7 @@
     }
     /* Sections */
     .section {
-      margin-top: 5mm;
+      margin-top: 5.8mm;
     }
     .section-title {
       font-size: 11pt;
@@ -91,18 +91,18 @@
     }
     .entry-body {
       font-size: 9.5pt;
-      font-weight: 450;
+      font-weight: 400;
       color: #4b5563;
-      line-height: 1.48;
+      line-height: 1.52;
       text-align: justify;
       text-align-last: left;
     }
     /* Intro */
     .intro-body {
       font-size: 9.5pt;
-      font-weight: 450;
+      font-weight: 400;
       color: #4b5563;
-      line-height: 1.48;
+      line-height: 1.52;
     }
     .intro-lead {
       font-weight: 600;
@@ -111,9 +111,9 @@
     /* Skills */
     .skills-body {
       font-size: 9.5pt;
-      font-weight: 450;
+      font-weight: 400;
       color: #4b5563;
-      line-height: 1.5;
+      line-height: 1.55;
     }
     /* Footer QR */
     .qr {
@@ -136,19 +136,19 @@
   </style>
 </head>
 <body>
-  <main class="page">
+  <main class="page" data-resume-page>
     <!-- Header -->
-    <div class="header">
+    <div class="header" data-resume-section="header">
       <div class="name">示例候选人</div>
       <div class="meta">
         软件工程专业 ｜ 意向岗位：AI 产品 / 数据产品 / 增长产品<br>
         138-0000-0000 ｜ candidate@example.com ｜ example.com
       </div>
-      <img class="avatar" src="assets/avatar.png" alt="">
+      <img class="avatar" src="assets/avatar.png" alt="" data-resume-asset="avatar">
     </div>
 
     <!-- 个人介绍 -->
-    <div class="section">
+    <div class="section" data-resume-section="intro">
       <div class="section-title">个人介绍</div>
       <div class="intro-body">
         <span class="intro-lead">技术与业务理解兼具的产品候选人，擅长把复杂问题拆成可验证的原型和数据指标。</span>过往在 AI 应用、内容增长与内部工具项目中，能够从用户场景出发完成需求分析、原型设计、实验验证和交付跟进。
@@ -156,14 +156,14 @@
     </div>
 
     <!-- 教育经历 -->
-    <div class="section">
+    <div class="section" data-resume-section="education">
       <div class="section-title">教育经历</div>
-      <div class="entry">
+      <div class="entry" data-resume-entry>
         <div class="entry-header">
           <span class="entry-title">本科 ｜ 岭南科技大学 ｜ 软件工程 ｜ GPA 3.8/5.0（专业前10%）</span>
           <span class="entry-date">2022.09 - 2026.06</span>
         </div>
-        <div class="entry-body">
+        <div class="entry-body" data-resume-body>
           主修数据结构、数据库系统、人机交互、软件工程、机器学习基础、产品设计方法等。<br>
           荣誉奖项：校级一等奖学金、创新创业竞赛金奖；证书：CET-6 540。
         </div>
@@ -171,65 +171,65 @@
     </div>
 
     <!-- 实习经历 -->
-    <div class="section">
+    <div class="section" data-resume-section="experience">
       <div class="section-title">实习经历</div>
-      <div class="entry">
+      <div class="entry" data-resume-entry>
         <div class="entry-header">
           <span class="entry-title">某 AI 应用团队 ｜ AI 应用产品经理</span>
           <span class="entry-date">2025.06 - 2026.03</span>
         </div>
         <div class="entry-sub">智能检索助手 ｜ 从需求分析到原型验证</div>
-        <div class="entry-body">
+        <div class="entry-body" data-resume-body>
           面向知识库"搜得到但难以定位"的问题，负责检索入口、结果聚合、答案引用与反馈链路设计；输出 PRD、Figma 原型和可交互 Demo，推动方案进入研发排期，验证搜索定位效率提升的核心路径。
         </div>
       </div>
-      <div class="entry">
+      <div class="entry" data-resume-entry>
         <div class="entry-header">
           <span class="entry-title" style="visibility:hidden;">某 AI 应用团队 ｜ AI 应用产品经理</span>
           <span class="entry-date" style="visibility:hidden;">2025.06 - 2026.03</span>
         </div>
         <div class="entry-sub">模型效果评测 ｜ 指标体系与 Badcase 归因</div>
-        <div class="entry-body">
+        <div class="entry-body" data-resume-body>
           搭建覆盖准确性、可读性、引用一致性的评测表，整理 300+ 条典型 Case，并与算法同学复盘回答偏差原因；通过 Prompt 调优和样本分层，使核心场景通过率从 72% 提升至 86%。
         </div>
       </div>
-      <div class="entry">
+      <div class="entry" data-resume-entry>
         <div class="entry-header">
           <span class="entry-title">某内容增长团队 ｜ 内容增长产品助理</span>
           <span class="entry-date">2025.01 - 2025.05</span>
         </div>
         <div class="entry-sub">创作者数据看板 ｜ 指标拆解与运营提效</div>
-        <div class="entry-body">
+        <div class="entry-body" data-resume-body>
           针对运营团队手工汇总慢的问题，梳理内容曝光、点击、转化和留存指标，设计看板字段与筛选方式；上线后将周报整理时间从 4h 缩短至 40min，并支持 20+ 位创作者复盘内容表现。
         </div>
       </div>
     </div>
 
     <!-- 项目经历 -->
-    <div class="section">
+    <div class="section" data-resume-section="projects">
       <div class="section-title">项目经历</div>
-      <div class="entry">
+      <div class="entry" data-resume-entry>
         <div class="entry-header">
           <span class="entry-title">校园 AI 助手 ｜ Agent Workflow 原型</span>
           <span class="entry-date">2025.03 - 2025.06</span>
         </div>
-        <div class="entry-body">
+        <div class="entry-body" data-resume-body>
           围绕学生事务咨询高频问题，设计"问题识别 - 知识检索 - 表单引导 - 人工转接"流程，使用低代码工具搭建可演示原型；在 30 人试用中收集反馈，沉淀 FAQ、异常兜底与流程优化清单。
         </div>
       </div>
-      <div class="entry">
+      <div class="entry" data-resume-entry>
         <div class="entry-header">
           <span class="entry-title">数据分析课程项目 ｜ 用户流失预测</span>
           <span class="entry-date">2024.09 - 2024.12</span>
         </div>
-        <div class="entry-body">
+        <div class="entry-body" data-resume-body>
           基于公开数据集完成用户行为清洗、特征构造和预测建模，并把模型结果转译为产品策略建议；最终输出分析报告和可视化仪表盘，获得课程项目优秀评级。
         </div>
       </div>
     </div>
 
     <!-- 核心能力 -->
-    <div class="section">
+    <div class="section" data-resume-section="skills">
       <div class="section-title">核心能力</div>
       <div class="skills-body">
         AI 产品：需求分析、Prompt / Context 工程、Agent Workflow、模型评测、Badcase 归因、搜索体验优化。数据工具：SQL / Python / Excel / 可视化看板，能完成数据清洗、指标分析和实验复盘。产品交付：PRD / Figma / 用户访谈 / 竞品分析 / 指标拆解 / 版本回归，能跟进需求从评审到上线。工具链：Codex / Claude Code / Cursor / Obsidian，熟悉用 AI 编程和知识库工具完成原型、调研与文档沉淀。
@@ -237,7 +237,7 @@
     </div>
 
     <!-- QR -->
-    <img class="qr" src="assets/qr.png" alt="">
+    <img class="qr" src="assets/qr.png" alt="" data-resume-asset="qr">
     <div class="qr-label">作品集二维码</div>
   </main>
 </body>

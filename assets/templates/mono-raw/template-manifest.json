@@ -1,0 +1,20 @@
+{
+  "template_id": "mono-raw",
+  "display_name": "Mono Raw",
+  "status": "admitted",
+  "expected_font": "PingFang",
+  "style_direction": "Brutalist monospace resume with direct labels and dashed separators",
+  "intended_users": ["engineering candidates", "developer-tool product candidates", "technical creator roles"],
+  "locked_layout_rules": [
+    "A4 portrait, one page, zero print margin",
+    "monospace-first typography with Chinese fallback",
+    "pure black and white",
+    "single-column reading order"
+  ],
+  "component_slots": ["header", "profile", "education", "experience", "projects", "skills", "footer_qr"],
+  "component_diy_policy": {
+    "ai_may_decide": ["optional technical sections", "section naming", "verified numeric emphasis"],
+    "ai_must_not": ["invent facts or metrics", "add ornamental color", "move internship into projects"]
+  },
+  "qa_gates": ["one page A4", "expected Chinese fallback font", "logical reading order", "no clipping or overlap", "visual review"]
+}

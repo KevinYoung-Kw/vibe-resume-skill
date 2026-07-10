@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>示例候选人-Folio Ledger简历模板</title>
+  <style>
+    @page { size: A4; margin: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #16211d;
+      --body: #4f5c57;
+      --muted: #8a948f;
+      --rule: #d9dfdc;
+      --paper: #ffffff;
+      --green: #164b3b;
+      --amber: #d38a31;
+    }
+    html, body {
+      background: #e9eeeb;
+      color: var(--ink);
+      font-family: "PingFang SC", "PingFangSC-Regular", -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .page {
+      position: relative;
+      width: 210mm;
+      height: 297mm;
+      overflow: hidden;
+      background: var(--paper);
+    }
+    .content {
+      height: 100%;
+      margin-left: 18mm;
+      padding: 9mm 9mm 8mm 8mm;
+    }
+    .rail {
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 18mm;
+      background: var(--green);
+      color: #fff;
+    }
+    .rail-title {
+      position: absolute;
+      top: 10mm;
+      left: 5.1mm;
+      writing-mode: vertical-rl;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 8.5pt;
+      line-height: 1;
+      opacity: .88;
+    }
+    .rail-folio {
+      position: absolute;
+      left: 4.5mm;
+      bottom: 10mm;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 17pt;
+      color: #f2c17f;
+    }
+    .header {
+      position: relative;
+      min-height: 38mm;
+      padding-right: 29mm;
+      border-bottom: 1.5pt solid var(--green);
+    }
+    .kicker {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 8pt;
+      color: var(--green);
+      margin-bottom: 1.5mm;
+    }
+    .name {
+      font-size: 29pt;
+      font-weight: 600;
+      line-height: 1.08;
+      color: var(--ink);
+    }
+    .role {
+      margin-top: 2mm;
+      font-size: 10pt;
+      font-weight: 600;
+      color: var(--green);
+    }
+    .contact {
+      margin-top: 1.6mm;
+      font-size: 8.8pt;
+      line-height: 1.55;
+      color: var(--body);
+    }
+    .contact a { color: var(--green); text-decoration: underline; }
+    .avatar {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 22mm;
+      height: 29mm;
+      object-fit: cover;
+    }
+    .resume-section {
+      display: grid;
+      grid-template-columns: 29mm minmax(0, 1fr);
+      border-top: .5pt solid var(--rule);
+      padding-top: 4mm;
+      margin-top: 5mm;
+    }
+    .profile-section { border-top: 0; margin-top: 4mm; }
+    [data-resume-section="intro"] { min-height: 24mm; }
+    [data-resume-section="education"] { min-height: 26mm; }
+    [data-resume-section="experience"] { min-height: 76mm; }
+    [data-resume-section="projects"] { min-height: 48mm; }
+    [data-resume-section="skills"] { min-height: 32mm; }
+    .section-index {
+      padding-right: 5mm;
+    }
+    .section-no {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18pt;
+      line-height: 1;
+      color: var(--amber);
+    }
+    .section-label {
+      display: block;
+      margin-top: 1.4mm;
+      font-size: 8.5pt;
+      font-weight: 600;
+      color: var(--green);
+    }
+    .section-content { min-width: 0; }
+    .profile {
+      font-size: 9.5pt;
+      line-height: 1.65;
+      color: var(--body);
+      text-align: justify;
+    }
+    .profile strong { color: var(--ink); font-weight: 600; }
+    .entry { margin-bottom: 3.5mm; }
+    .entry:last-child { margin-bottom: 0; }
+    .entry-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 4mm;
+      margin-bottom: .8mm;
+    }
+    .entry-title {
+      font-size: 10.2pt;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .entry-date {
+      flex: 0 0 auto;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 8.2pt;
+      color: var(--muted);
+    }
+    .entry-sub {
+      margin: 1mm 0 .5mm;
+      font-size: 9.5pt;
+      font-weight: 600;
+      color: var(--green);
+    }
+    .entry-body {
+      font-size: 9.2pt;
+      line-height: 1.58;
+      color: var(--body);
+      text-align: justify;
+    }
+    .highlight { color: var(--green); font-weight: 600; }
+    .education-detail,
+    .skills {
+      font-size: 9.2pt;
+      line-height: 1.65;
+      color: var(--body);
+    }
+    .skills strong { color: var(--ink); font-weight: 600; }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 18mm;
+      gap: 6mm;
+      align-items: end;
+    }
+    .qr-wrap { text-align: center; }
+    .qr {
+      width: 15mm;
+      height: 15mm;
+      object-fit: contain;
+    }
+    .qr-note {
+      margin-top: .7mm;
+      font-size: 6pt;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main class="page" data-resume-page>
+    <div class="content">
+      <header class="header" data-resume-section="header">
+        <div class="kicker">CURRICULUM VITAE / PRODUCT &amp; AI</div>
+        <div class="name">示例候选人</div>
+        <div class="role">AI 产品经理 · 数据产品 · 增长产品</div>
+        <div class="contact">软件工程专业&nbsp;&nbsp;·&nbsp;&nbsp;138-0000-0000&nbsp;&nbsp;·&nbsp;&nbsp;candidate@example.com&nbsp;&nbsp;·&nbsp;&nbsp;<a href="https://example.com">example.com</a></div>
+        <img class="avatar" src="assets/avatar.png" alt="" data-resume-asset="avatar">
+      </header>
+
+      <section class="resume-section profile-section" data-resume-section="intro">
+        <div class="section-index"><span class="section-no">00</span><span class="section-label">个人介绍</span></div>
+        <div class="profile" data-resume-body><strong>技术与业务理解兼具的产品候选人，擅长把复杂问题拆成可验证的原型和数据指标。</strong>过往在 AI 应用、内容增长与内部工具项目中，能够从用户场景出发完成需求分析、原型设计、实验验证和交付跟进。</div>
+      </section>
+
+      <section class="resume-section" data-resume-section="education">
+        <div class="section-index"><span class="section-no">01</span><span class="section-label">教育经历</span></div>
+        <div class="section-content">
+          <article class="entry" data-resume-entry>
+            <div class="entry-head"><div class="entry-title">岭南科技大学 · 软件工程 · 本科</div><div class="entry-date">2022.09 — 2026.06</div></div>
+            <div class="education-detail" data-resume-body>GPA 3.8/5.0（专业前10%）· 校级一等奖学金 · 创新创业竞赛金奖 · CET-6 540<br>主修数据结构、数据库系统、人机交互、软件工程、机器学习基础、产品设计方法。</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="resume-section" data-resume-section="experience">
+        <div class="section-index"><span class="section-no">02</span><span class="section-label">实习经历</span></div>
+        <div class="section-content">
+          <article class="entry" data-resume-entry>
+            <div class="entry-head"><div class="entry-title">某 AI 应用团队 · AI 应用产品经理</div><div class="entry-date">2025.06 — 2026.03</div></div>
+            <div class="entry-sub">智能检索助手 · 从需求分析到原型验证</div>
+            <div class="entry-body" data-resume-body>面向知识库“搜得到但难以定位”的问题，负责检索入口、结果聚合、答案引用与反馈链路设计；输出 PRD、Figma 原型和可交互 Demo，推动方案进入研发排期，验证<span class="highlight">搜索定位效率提升</span>的核心路径。</div>
+            <div class="entry-sub">模型效果评测 · 指标体系与 Badcase 归因</div>
+            <div class="entry-body" data-resume-body>搭建覆盖准确性、可读性、引用一致性的评测表，整理 300+ 条典型 Case，并与算法同学复盘回答偏差原因；通过 Prompt 调优和样本分层，使核心场景通过率从 72% 提升至 <span class="highlight">86%</span>。</div>
+          </article>
+          <article class="entry" data-resume-entry>
+            <div class="entry-head"><div class="entry-title">某内容增长团队 · 内容增长产品助理</div><div class="entry-date">2025.01 — 2025.05</div></div>
+            <div class="entry-sub">创作者数据看板 · 指标拆解与运营提效</div>
+            <div class="entry-body" data-resume-body>针对运营团队手工汇总慢的问题，梳理内容曝光、点击、转化和留存指标，设计看板字段与筛选方式；上线后将周报整理时间从 4h 缩短至 <span class="highlight">40min</span>，并支持 20+ 位创作者复盘内容表现。</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="resume-section" data-resume-section="projects">
+        <div class="section-index"><span class="section-no">03</span><span class="section-label">项目经历</span></div>
+        <div class="section-content">
+          <article class="entry" data-resume-entry>
+            <div class="entry-head"><div class="entry-title">校园 AI 助手 · Agent Workflow 原型</div><div class="entry-date">2025.03 — 2025.06</div></div>
+            <div class="entry-body" data-resume-body>围绕学生事务咨询高频问题，设计“问题识别—知识检索—表单引导—人工转接”流程，使用低代码工具搭建可演示原型；在 30 人试用中收集反馈，沉淀 FAQ、异常兜底与流程优化清单。</div>
+          </article>
+          <article class="entry" data-resume-entry>
+            <div class="entry-head"><div class="entry-title">数据分析课程项目 · 用户流失预测</div><div class="entry-date">2024.09 — 2024.12</div></div>
+            <div class="entry-body" data-resume-body>基于公开数据集完成用户行为清洗、特征构造和预测建模，并把模型结果转译为产品策略建议；最终输出分析报告和可视化仪表盘，获得课程项目优秀评级。</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="resume-section" data-resume-section="skills">
+        <div class="section-index"><span class="section-no">04</span><span class="section-label">核心能力</span></div>
+        <div class="skills-grid">
+          <div class="skills" data-resume-body><strong>AI 产品：</strong>Prompt / Context 工程、Agent Workflow、模型评测、Badcase 归因、搜索体验优化<br><strong>产品交付：</strong>需求分析、PRD / Figma、用户访谈、竞品分析、指标拆解、版本回归<br><strong>工具链：</strong>SQL、Python、Codex、Claude Code、Cursor、Obsidian</div>
+          <div class="qr-wrap"><img class="qr" src="assets/qr.png" alt="" data-resume-asset="qr"><div class="qr-note">作品集</div></div>
+        </div>
+      </section>
+    </div>
+    <aside class="rail" aria-hidden="true"><div class="rail-title">ARCHIVE / PROFILE / 2026</div><div class="rail-folio">01</div></aside>
+  </main>
+</body>
+</html>

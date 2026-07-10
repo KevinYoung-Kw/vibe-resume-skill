@@ -1,0 +1,20 @@
+{
+  "template_id": "code-poetry",
+  "display_name": "Code Poetry",
+  "status": "admitted",
+  "expected_font": "PingFang",
+  "style_direction": "Source-code metaphor with syntax-like hierarchy and line-number rhythm",
+  "intended_users": ["developer-tool product candidates", "technical product candidates", "AI coding and engineering roles"],
+  "locked_layout_rules": [
+    "A4 portrait, one page, zero print margin",
+    "code-inspired labels without sacrificing Chinese readability",
+    "orange metrics as sparse evidence highlights",
+    "single-column reading order"
+  ],
+  "component_slots": ["header", "experience", "projects", "education", "skills", "footer_qr"],
+  "component_diy_policy": {
+    "ai_may_decide": ["section naming", "optional technical sections", "verified highlights"],
+    "ai_must_not": ["invent facts or metrics", "turn the resume into a code screenshot", "hide real section semantics"]
+  },
+  "qa_gates": ["one page A4", "expected font", "logical reading order", "no clipping or overlap", "visual review"]
+}

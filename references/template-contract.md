@@ -34,6 +34,18 @@ Use this reference when editing `assets/templates/basic-a4/resume.html` or a res
 - `.site-link`: blue and underlined when the URL should appear clickable.
 - `.footer-img` and `.footer-note`: QR or portfolio marker. Align image and caption as a single unit.
 
+## Semantic Markers
+
+Keep CSS class names free to express each template's visual language, and use lightweight `data-*` markers for shared resume semantics:
+
+- `data-resume-page`: the printable A4 canvas.
+- `data-resume-section="header|intro|education|experience|projects|skills|honors"`: a section container or, for absolute layouts, its section title.
+- `data-resume-entry`: one education, company, internship, or project entry.
+- `data-resume-body`: recruiter-facing descriptive copy.
+- `data-resume-asset="avatar|qr"`: candidate assets.
+
+Do not style against these markers. They exist for content replacement and QA, so templates can keep distinct class names and layouts.
+
 ## Spacing Rules
 
 Adjust top coordinates only after content is stable.

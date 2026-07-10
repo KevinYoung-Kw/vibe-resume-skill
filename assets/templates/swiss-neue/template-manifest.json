@@ -1,0 +1,20 @@
+{
+  "template_id": "swiss-neue",
+  "display_name": "Swiss Neue",
+  "status": "admitted",
+  "expected_font": "PingFang",
+  "style_direction": "Swiss typographic grid with a fixed label column and restrained red accent",
+  "intended_users": ["design-conscious product candidates", "strategy and research roles", "candidates with medium content density"],
+  "locked_layout_rules": [
+    "A4 portrait, one page, zero print margin",
+    "fixed label column and aligned content grid",
+    "muted red as the only accent",
+    "main content bottom whitespace must not exceed 15%"
+  ],
+  "component_slots": ["header", "profile", "education", "experience", "projects", "skills", "footer_qr"],
+  "component_diy_policy": {
+    "ai_may_decide": ["optional sections", "section naming", "whether awards merge into education"],
+    "ai_must_not": ["invent facts or metrics", "break the label grid", "add decorative UI components"]
+  },
+  "qa_gates": ["one page A4", "expected font", "logical reading order", "bottom whitespace <= 15%", "visual review"]
+}

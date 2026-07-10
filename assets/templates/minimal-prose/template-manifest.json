@@ -1,0 +1,20 @@
+{
+  "template_id": "minimal-prose",
+  "display_name": "Minimal Prose",
+  "status": "admitted",
+  "expected_font": "PingFang",
+  "style_direction": "Quiet prose-led single-column resume with generous but controlled rhythm",
+  "intended_users": ["content-heavy product candidates", "research and strategy roles", "candidates preferring restrained hierarchy"],
+  "locked_layout_rules": [
+    "A4 portrait, one page, zero print margin",
+    "typography-first hierarchy",
+    "no decorative cards or colored blocks",
+    "main content bottom whitespace must not exceed 15%"
+  ],
+  "component_slots": ["header", "intro", "education", "internship", "projects", "core_abilities", "footer_qr"],
+  "component_diy_policy": {
+    "ai_may_decide": ["optional sections", "section naming", "verified highlights"],
+    "ai_must_not": ["invent facts or metrics", "compress body text below 9pt", "add decorative UI components"]
+  },
+  "qa_gates": ["one page A4", "expected font", "logical reading order", "bottom whitespace <= 15%", "visual review"]
+}

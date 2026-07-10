@@ -4,7 +4,7 @@ Use this reference when expanding `html-resume-builder` with additional resume t
 
 The default template is not a loose inspiration board. Treat `assets/templates/basic-a4/` as the baseline quality bar. New templates may vary in style, but they must match or exceed the baseline in layout stability, visual rhythm, information density, recruiting readability, and PDF export reliability.
 
-Current admitted template library: `basic-a4`, `editorial`, `sidebar-compact`, `timeline-grid`, `minimal-prose`, `mono-raw`, `code-poetry`, `swiss-neue`.
+Current admitted template library: `basic-a4`, `editorial`, `sidebar-compact`, `timeline-grid`, `minimal-prose`, `mono-raw`, `code-poetry`, `swiss-neue`, `bauhaus`, `corporate-classic`, `gov-red`, `folio-ledger`.
 
 ---
 
@@ -83,10 +83,10 @@ After the brief passes:
 
 ### Step 3: Export and QA
 
-Run the full export and QA pipeline:
+Run the export and QA pipeline with the shared demo content:
 
 ```bash
-python scripts/export_and_qa.py workspace/resume.html --pdf workspace/resume.pdf --strict-final
+python scripts/export_and_qa.py workspace/resume.html --pdf workspace/resume.pdf
 ```
 
 Required evidence:
@@ -97,7 +97,7 @@ Required evidence:
 4. `pdffonts`: expected Chinese font handling.
 5. `pdftotext -layout`: logical reading order preserved.
 6. Main content bottom whitespace ≤ 15%.
-7. No sensitive terms or demo placeholders.
+7. No real personal or company-sensitive information.
 8. No overlap, clipping, collision, or broken asset crops.
 
 ### Step 4: Side-by-Side Comparison with basic-a4
@@ -132,6 +132,8 @@ Present to the user:
 - A brief explanation of the design direction and how it compares to basic-a4.
 
 Only after explicit user approval, move files to `assets/templates/<template-name>/`.
+
+Run `--strict-final` only after replacing demo content with a real candidate's verified content. It is not part of the template style comparison.
 
 ---
 

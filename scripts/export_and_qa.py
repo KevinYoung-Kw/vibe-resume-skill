@@ -52,6 +52,22 @@ def find_chrome(explicit: str | None) -> str | None:
     return None
 
 
+def expected_font_for(html: Path, explicit: str | None) -> str:
+    if explicit is not None:
+        return explicit
+
+    manifest_path = html.parent / "template-manifest.json"
+    if manifest_path.exists():
+        try:
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            value = manifest.get("expected_font")
+            if isinstance(value, str) and value.strip():
+                return value.strip()
+        except (OSError, json.JSONDecodeError):
+            pass
+    return "PingFang"
+
+
 def add_check(checks: list[dict], name: str, passed: bool, evidence: str, required: bool = True) -> None:
     checks.append(
         {
@@ -187,7 +203,11 @@ def read_ppm(path: Path) -> tuple[int, int, bytes]:
     max_value = int(token())
     if max_value != 255:
         raise ValueError(f"Unsupported PPM max value: {max_value}")
-    while index < len(data) and data[index:index + 1].isspace():
+    if index >= len(data) or not data[index:index + 1].isspace():
+        raise ValueError("PPM header is missing its pixel-data separator")
+    if data[index:index + 2] == b"\r\n":
+        index += 2
+    else:
         index += 1
     pixels = data[index:]
     expected = width * height * 3
@@ -287,7 +307,7 @@ def main() -> int:
     parser.add_argument("--pdf", help="Output PDF path. Defaults to HTML stem with .pdf.")
     parser.add_argument("--screenshot", help="Screenshot prefix for pdftoppm. Defaults beside the PDF.")
     parser.add_argument("--chrome", help="Path to Chrome/Chromium.")
-    parser.add_argument("--expected-font", default="PingFang", help="Font substring expected in pdffonts output.")
+    parser.add_argument("--expected-font", help="Font substring expected in pdffonts output. Defaults to the template manifest, then PingFang.")
     parser.add_argument("--forbid-term", action="append", default=[], help="Additional forbidden term to scan.")
     parser.add_argument("--strict-final", action="store_true", help="Also reject bundled demo/template leftovers.")
     parser.add_argument(
@@ -326,7 +346,7 @@ def main() -> int:
 
     if pdf.exists() and pdf.stat().st_size > 0:
         check_pdfinfo(pdf, checks)
-        check_fonts(pdf, checks, args.expected_font)
+        check_fonts(pdf, checks, expected_font_for(html, args.expected_font))
         forbidden_terms = DEFAULT_FORBIDDEN_TERMS + list(args.forbid_term)
         if args.strict_final:
             forbidden_terms += STRICT_FINAL_FORBIDDEN_TERMS

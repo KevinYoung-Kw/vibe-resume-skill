@@ -2,6 +2,7 @@
   "template_id": "editorial",
   "display_name": "Editorial",
   "status": "admitted",
+  "expected_font": "PingFang",
   "style_direction": "Magazine/editorial typography with left sidebar for quick-scan info and right main column for narrative",
   "intended_users": [
     "Design and strategy roles",

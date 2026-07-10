@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import shutil
 from pathlib import Path
 
@@ -19,6 +20,17 @@ def main() -> int:
 
     if not source.exists():
         raise SystemExit(f"Template not found: {source}")
+
+    resume_html = source / "resume.html"
+    manifest_path = source / "template-manifest.json"
+    if not resume_html.exists() or not manifest_path.exists():
+        raise SystemExit(f"Template is incomplete: {source}")
+
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    if manifest.get("template_id") != args.template:
+        raise SystemExit(f"Template manifest id does not match directory: {manifest_path}")
+    if manifest.get("status") not in {"baseline", "admitted"}:
+        raise SystemExit(f"Template is not admitted: {args.template}")
 
     if destination.exists():
         if not args.force:

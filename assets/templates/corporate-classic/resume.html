@@ -17,7 +17,7 @@
       height: 297mm;
       overflow: hidden;
       background: #fff;
-      padding: 14mm 16mm 12mm;
+      padding: 10mm;
       position: relative;
     }
 
@@ -55,8 +55,8 @@
     /* Avatar */
     .avatar {
       position: absolute;
-      top: 14mm;
-      right: 16mm;
+      top: 10mm;
+      right: 10mm;
       width: 16mm;
       height: 21mm;
       object-fit: cover;
@@ -65,8 +65,8 @@
     /* QR Code */
     .qr-wrap {
       position: absolute;
-      bottom: 12mm;
-      right: 16mm;
+      bottom: 10mm;
+      right: 10mm;
       text-align: center;
     }
     .qr-wrap img {
@@ -81,7 +81,7 @@
 
     /* Sections */
     .section {
-      margin-bottom: 3.5mm;
+      margin-bottom: 4.2mm;
     }
     .section-title {
       font-size: 11pt;
@@ -89,15 +89,15 @@
       color: #111;
       padding-bottom: 1.5mm;
       border-bottom: 0.5pt solid #ddd;
-      margin-bottom: 2.5mm;
+      margin-bottom: 2.8mm;
     }
 
     /* Intro */
     .intro {
       font-size: 9.5pt;
-      font-weight: 450;
+      font-weight: 400;
       color: #333;
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     /* Entry */
@@ -131,9 +131,9 @@
     }
     .entry-body {
       font-size: 9.5pt;
-      font-weight: 450;
+      font-weight: 400;
       color: #333;
-      line-height: 1.5;
+      line-height: 1.55;
       text-align: justify;
     }
     .entry-body .highlight {
@@ -160,13 +160,13 @@
     .edu-detail {
       font-size: 9.5pt;
       color: #333;
-      font-weight: 450;
-      line-height: 1.5;
+      font-weight: 400;
+      line-height: 1.55;
     }
     .skills-list {
       font-size: 9.5pt;
       color: #333;
-      font-weight: 450;
+      font-weight: 400;
       line-height: 1.7;
     }
     .skills-list strong {
@@ -176,10 +176,10 @@
   </style>
 </head>
 <body>
-  <main class="page">
-    <img class="avatar" src="assets/avatar.png" alt="">
+  <main class="page" data-resume-page>
+    <img class="avatar" src="assets/avatar.png" alt="" data-resume-asset="avatar">
 
-    <div class="header">
+    <div class="header" data-resume-section="header">
       <div class="name">示例候选人</div>
       <div class="tagline">意向岗位：AI 产品经理 / 数据产品 / 增长产品</div>
       <div class="contact">
@@ -189,52 +189,52 @@
       </div>
     </div>
 
-    <div class="section">
+    <div class="section" data-resume-section="intro">
       <div class="section-title">个人介绍</div>
       <div class="intro">技术与业务理解兼具的产品候选人，擅长把复杂问题拆成可验证的原型和数据指标。过往在 AI 应用、内容增长与内部工具项目中，能够从用户场景出发完成需求分析、原型设计、实验验证和交付跟进。</div>
     </div>
 
-    <div class="section">
+    <div class="section" data-resume-section="experience">
       <div class="section-title">实习经历</div>
-      <div class="entry">
+      <div class="entry" data-resume-entry>
         <div class="entry-header">
           <div class="entry-title">某 AI 应用团队 · AI 应用产品经理</div>
           <div class="entry-date">2025.06 - 2026.03</div>
         </div>
         <div class="entry-sub">智能检索助手 · 从需求分析到原型验证</div>
-        <div class="entry-body">面向知识库"搜得到但难以定位"的问题，负责检索入口、结果聚合、答案引用与反馈链路设计；输出 PRD、Figma 原型和可交互 Demo，推动方案进入研发排期，验证<span class="highlight">搜索定位效率提升</span>的核心路径。</div>
+        <div class="entry-body" data-resume-body>面向知识库"搜得到但难以定位"的问题，负责检索入口、结果聚合、答案引用与反馈链路设计；输出 PRD、Figma 原型和可交互 Demo，推动方案进入研发排期，验证<span class="highlight">搜索定位效率提升</span>的核心路径。</div>
         <div class="entry-sub">模型效果评测 · 指标体系与 Badcase 归因</div>
-        <div class="entry-body">搭建覆盖准确性、可读性、引用一致性的评测表，整理 300+ 条典型 Case，并与算法同学复盘回答偏差原因；通过 Prompt 调优和样本分层，使核心场景通过率从 72% 提升至 <span class="highlight">86%</span>。</div>
+        <div class="entry-body" data-resume-body>搭建覆盖准确性、可读性、引用一致性的评测表，整理 300+ 条典型 Case，并与算法同学复盘回答偏差原因；通过 Prompt 调优和样本分层，使核心场景通过率从 72% 提升至 <span class="highlight">86%</span>。</div>
       </div>
-      <div class="entry">
+      <div class="entry" data-resume-entry>
         <div class="entry-header">
           <div class="entry-title">某内容增长团队 · 内容增长产品助理</div>
           <div class="entry-date">2025.01 - 2025.05</div>
         </div>
         <div class="entry-sub">创作者数据看板 · 指标拆解与运营提效</div>
-        <div class="entry-body">针对运营团队手工汇总慢的问题，梳理内容曝光、点击、转化和留存指标，设计看板字段与筛选方式；上线后将周报整理时间从 4h 缩短至 <span class="highlight">40min</span>，并支持 20+ 位创作者复盘内容表现。</div>
+        <div class="entry-body" data-resume-body>针对运营团队手工汇总慢的问题，梳理内容曝光、点击、转化和留存指标，设计看板字段与筛选方式；上线后将周报整理时间从 4h 缩短至 <span class="highlight">40min</span>，并支持 20+ 位创作者复盘内容表现。</div>
       </div>
     </div>
 
-    <div class="section">
+    <div class="section" data-resume-section="projects">
       <div class="section-title">项目经历</div>
-      <div class="entry">
+      <div class="entry" data-resume-entry>
         <div class="entry-header">
           <div class="entry-title">校园 AI 助手 · Agent Workflow 原型</div>
           <div class="entry-date">2025.03 - 2025.06</div>
         </div>
-        <div class="entry-body">围绕学生事务咨询高频问题，设计"问题识别 - 知识检索 - 表单引导 - 人工转接"流程，使用低代码工具搭建可演示原型；在 30 人试用中收集反馈，沉淀 FAQ、异常兜底与流程优化清单。</div>
+        <div class="entry-body" data-resume-body>围绕学生事务咨询高频问题，设计"问题识别 - 知识检索 - 表单引导 - 人工转接"流程，使用低代码工具搭建可演示原型；在 30 人试用中收集反馈，沉淀 FAQ、异常兜底与流程优化清单。</div>
       </div>
-      <div class="entry">
+      <div class="entry" data-resume-entry>
         <div class="entry-header">
           <div class="entry-title">数据分析课程项目 · 用户流失预测</div>
           <div class="entry-date">2024.09 - 2024.12</div>
         </div>
-        <div class="entry-body">基于公开数据集完成用户行为清洗、特征构造和预测建模，并把模型结果转译为产品策略建议；最终输出分析报告和可视化仪表盘，获得课程项目优秀评级。</div>
+        <div class="entry-body" data-resume-body>基于公开数据集完成用户行为清洗、特征构造和预测建模，并把模型结果转译为产品策略建议；最终输出分析报告和可视化仪表盘，获得课程项目优秀评级。</div>
       </div>
     </div>
 
-    <div class="section">
+    <div class="section" data-resume-section="education">
       <div class="section-title">教育经历</div>
       <div class="edu-row">
         <div class="edu-school">岭南科技大学</div>
@@ -243,7 +243,7 @@
       <div class="edu-detail">软件工程 · 本科 · GPA 3.8/5.0（前 10%）</div>
     </div>
 
-    <div class="section">
+    <div class="section" data-resume-section="skills">
       <div class="section-title">核心能力</div>
       <div class="skills-list">
         <strong>产品：</strong>需求分析 / PRD / Figma / 用户访谈 / 指标拆解 / 数据看板<br>
@@ -252,13 +252,13 @@
       </div>
     </div>
 
-    <div class="section">
+    <div class="section" data-resume-section="honors">
       <div class="section-title">荣誉证书</div>
       <div class="skills-list">校级一等奖学金 / 创新创业竞赛金奖 / CET-6 540</div>
     </div>
 
     <div class="qr-wrap">
-      <img src="assets/qr.png" alt="">
+      <img src="assets/qr.png" alt="" data-resume-asset="qr">
       <div class="qr-note">作品集</div>
     </div>
   </main>

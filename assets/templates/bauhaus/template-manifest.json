@@ -1,0 +1,33 @@
+{
+  "template_id": "bauhaus",
+  "display_name": "Bauhaus",
+  "status": "admitted",
+  "expected_font": "PingFang",
+  "style_direction": "Bauhaus geometric accents with a strong editorial hierarchy",
+  "intended_users": [
+    "creative product candidates",
+    "design and content roles",
+    "candidates who need a distinctive but readable one-page resume"
+  ],
+  "locked_layout_rules": [
+    "A4 portrait, one page, zero print margin",
+    "PingFang SC font family",
+    "red, blue, and yellow geometric accents",
+    "single-column recruiter reading order",
+    "main content bottom whitespace must not exceed 15%"
+  ],
+  "component_slots": [
+    "header",
+    "intro",
+    "education",
+    "internship",
+    "projects",
+    "core_abilities",
+    "footer_qr"
+  ],
+  "component_diy_policy": {
+    "ai_may_decide": ["optional sections", "section naming", "verified highlights"],
+    "ai_must_not": ["invent facts or metrics", "move internship into projects", "remove the geometric design language"]
+  },
+  "qa_gates": ["one page A4", "expected font", "logical reading order", "no clipping or overlap", "visual review"]
+}

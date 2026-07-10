@@ -1,0 +1,20 @@
+{
+  "template_id": "gov-red",
+  "display_name": "Gov Red",
+  "status": "admitted",
+  "expected_font": "STSong",
+  "style_direction": "Formal Chinese institutional style with Song type and restrained red rules",
+  "intended_users": ["public-sector candidates", "state-owned enterprise candidates", "formal institutional roles"],
+  "locked_layout_rules": [
+    "A4 portrait, one page, zero print margin",
+    "STSong first for institutional document character",
+    "red section rules with black-gray body copy",
+    "single-column recruiter reading order"
+  ],
+  "component_slots": ["header", "intro", "education", "internship", "projects", "core_abilities", "footer_qr"],
+  "component_diy_policy": {
+    "ai_may_decide": ["certificates", "awards", "campus experience", "section naming"],
+    "ai_must_not": ["invent facts or metrics", "use casual visual language", "move internship into projects"]
+  },
+  "qa_gates": ["one page A4", "expected font", "logical reading order", "no clipping or overlap", "visual review"]
+}

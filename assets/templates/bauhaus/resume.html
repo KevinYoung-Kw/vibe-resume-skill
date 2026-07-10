@@ -158,13 +158,13 @@
       white-space: nowrap;
     }
     .entry-sub {
-      font-size: 8.5pt;
+      font-size: 9pt;
       font-weight: 400;
       color: #555;
       margin-bottom: 0.5mm;
     }
     .entry-body {
-      font-size: 8.5pt;
+      font-size: 9pt;
       font-weight: 300;
       line-height: 1.55;
       color: #444;
@@ -177,7 +177,7 @@
     /* Skills */
     .skills-block {
       padding-left: 5.5mm;
-      font-size: 8.2pt;
+      font-size: 9pt;
       font-weight: 300;
       line-height: 1.7;
       color: #444;
@@ -188,7 +188,7 @@
     }
     /* Education detail */
     .edu-detail {
-      font-size: 8.2pt;
+      font-size: 9pt;
       font-weight: 300;
       line-height: 1.55;
       color: #555;
@@ -226,11 +226,11 @@
   </style>
 </head>
 <body>
-  <main class="page">
+  <main class="page" data-resume-page>
     <div class="blue-accent"></div>
 
     <!-- HEADER -->
-    <div class="header">
+    <div class="header" data-resume-section="header">
       <div class="header-left">
         <div class="name">示例候选人</div>
         <div class="subtitle">
@@ -238,19 +238,19 @@
           138-0000-0000 <span class="sep">·</span> candidate@example.com <span class="sep">·</span> example.com
         </div>
       </div>
-      <img class="avatar" src="assets/avatar.png" alt="">
+      <img class="avatar" src="assets/avatar.png" alt="" data-resume-asset="avatar">
     </div>
 
     <!-- INTRO -->
-    <div class="section-title"><span class="geo-circle"></span>个人介绍</div>
-    <p class="intro">
+    <div class="section-title" data-resume-section="intro"><span class="geo-circle"></span>个人介绍</div>
+    <p class="intro" data-resume-body>
       <span class="lead">技术与业务理解兼具的产品候选人，擅长把复杂问题拆成可验证的原型和数据指标。</span>过往在 AI 应用、内容增长与内部工具项目中，能够从用户场景出发完成需求分析、原型设计、实验验证和交付跟进。
     </p>
 
     <!-- EDUCATION -->
     <div class="geo-sep"><span class="dot-r"></span><span class="dot-b"></span><span class="dot-y"></span><span class="line"></span></div>
-    <div class="section-title"><span class="geo-square"></span>教育经历</div>
-    <div class="entry">
+    <div class="section-title" data-resume-section="education"><span class="geo-square"></span>教育经历</div>
+    <div class="entry" data-resume-entry>
       <div class="entry-header">
         <span class="entry-title">岭南科技大学 · 软件工程 · 本科</span>
         <span class="entry-date">2022.09 – 2026.06</span>
@@ -263,59 +263,59 @@
 
     <!-- EXPERIENCE -->
     <div class="geo-sep"><span class="dot-b"></span><span class="dot-y"></span><span class="dot-r"></span><span class="line"></span></div>
-    <div class="section-title"><span class="geo-triangle"></span>实习经历</div>
-    <div class="entry">
+    <div class="section-title" data-resume-section="experience"><span class="geo-triangle"></span>实习经历</div>
+    <div class="entry" data-resume-entry>
       <div class="entry-header">
         <span class="entry-title">某 AI 应用团队 · AI 应用产品经理</span>
         <span class="entry-date">2025.06 – 2026.03</span>
       </div>
       <div class="entry-sub">智能检索助手｜从需求分析到原型验证</div>
-      <div class="entry-body">
+      <div class="entry-body" data-resume-body>
         面向知识库"搜得到但难以定位"的问题，负责检索入口、结果聚合、答案引用与反馈链路设计；输出 PRD、Figma 原型和可交互 Demo，推动方案进入研发排期，验证<span class="highlight">搜索定位效率提升</span>的核心路径。
       </div>
     </div>
-    <div class="entry">
+    <div class="entry" data-resume-entry>
       <div class="entry-sub">模型效果评测｜指标体系与 Badcase 归因</div>
-      <div class="entry-body">
+      <div class="entry-body" data-resume-body>
         搭建覆盖准确性、可读性、引用一致性的评测表，整理 300+ 条典型 Case，与算法同学复盘回答偏差原因；通过 Prompt 调优和样本分层，使核心场景通过率从 72% 提升至 <span class="highlight">86%</span>。
       </div>
     </div>
-    <div class="entry">
+    <div class="entry" data-resume-entry>
       <div class="entry-header">
         <span class="entry-title">某内容增长团队 · 内容增长产品助理</span>
         <span class="entry-date">2025.01 – 2025.05</span>
       </div>
       <div class="entry-sub">创作者数据看板｜指标拆解与运营提效</div>
-      <div class="entry-body">
+      <div class="entry-body" data-resume-body>
         针对运营团队手工汇总慢的问题，梳理内容曝光、点击、转化和留存指标，设计看板字段与筛选方式；上线后将周报整理时间从 4h 缩短至 <span class="highlight">40min</span>，支持 20+ 位创作者复盘内容表现。
       </div>
     </div>
 
     <!-- PROJECTS -->
     <div class="geo-sep"><span class="dot-y"></span><span class="dot-r"></span><span class="dot-b"></span><span class="line"></span></div>
-    <div class="section-title"><span class="geo-circle"></span>项目经历</div>
-    <div class="entry">
+    <div class="section-title" data-resume-section="projects"><span class="geo-circle"></span>项目经历</div>
+    <div class="entry" data-resume-entry>
       <div class="entry-header">
         <span class="entry-title">校园 AI 助手 · Agent Workflow 原型</span>
         <span class="entry-date">2025.03 – 2025.06</span>
       </div>
-      <div class="entry-body">
+      <div class="entry-body" data-resume-body>
         围绕学生事务咨询高频问题，设计"问题识别 - 知识检索 - 表单引导 - 人工转接"流程，使用低代码工具搭建可演示原型；30 人试用中收集反馈，沉淀 FAQ、异常兜底与流程优化清单。
       </div>
     </div>
-    <div class="entry">
+    <div class="entry" data-resume-entry>
       <div class="entry-header">
         <span class="entry-title">数据分析课程项目 · 用户流失预测</span>
         <span class="entry-date">2024.09 – 2024.12</span>
       </div>
-      <div class="entry-body">
+      <div class="entry-body" data-resume-body>
         基于公开数据集完成用户行为清洗、特征构造和预测建模，并把模型结果转译为产品策略建议；输出分析报告和可视化仪表盘，获课程优秀评级。
       </div>
     </div>
 
     <!-- SKILLS -->
     <div class="geo-sep"><span class="dot-r"></span><span class="dot-b"></span><span class="dot-y"></span><span class="line"></span></div>
-    <div class="section-title"><span class="geo-square"></span>核心能力</div>
+    <div class="section-title" data-resume-section="skills"><span class="geo-square"></span>核心能力</div>
     <div class="skills-block">
       <strong>AI 产品：</strong>需求分析、Prompt / Context 工程、Agent Workflow、模型评测、Badcase 归因、搜索体验优化<br>
       <strong>产品交付：</strong>PRD / Figma / 用户访谈 / 竞品分析 / 指标拆解 / 版本回归，能跟进需求从评审到上线<br>
@@ -325,7 +325,7 @@
 
     <!-- QR -->
     <div class="qr-block">
-      <img src="assets/qr.png" alt="">
+      <img src="assets/qr.png" alt="" data-resume-asset="qr">
       <div class="qr-label">作品集二维码</div>
     </div>
   </main>

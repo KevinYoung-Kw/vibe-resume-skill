@@ -2,6 +2,7 @@
   "template_id": "basic-a4",
   "display_name": "Basic A4",
   "status": "baseline",
+  "expected_font": "PingFang",
   "style_direction": "Chinese AI/product resume baseline",
   "intended_users": [
     "AI product candidates",

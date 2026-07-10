@@ -2,6 +2,7 @@
   "template_id": "sidebar-compact",
   "display_name": "Sidebar Compact",
   "status": "admitted",
+  "expected_font": "PingFang",
   "style_direction": "Dark sidebar with personal info/skills/education, white main body for narrative experiences",
   "intended_users": [
     "Technical product managers",

@@ -2,6 +2,7 @@
   "template_id": "timeline-grid",
   "display_name": "Timeline Grid",
   "status": "admitted",
+  "expected_font": "PingFang",
   "style_direction": "Vertical timeline spine with entry nodes, education in header meta, skills as bottom pills",
   "intended_users": [
     "Campus and early-career candidates",

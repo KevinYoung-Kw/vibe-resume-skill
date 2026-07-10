@@ -1,0 +1,25 @@
+{
+  "template_id": "folio-ledger",
+  "display_name": "Folio Ledger",
+  "status": "admitted",
+  "expected_font": "PingFang",
+  "style_direction": "European annual-report ledger with a folio rail and numbered sections",
+  "intended_users": [
+    "product and strategy candidates",
+    "consulting and research candidates",
+    "technical-program candidates with medium-to-high content density"
+  ],
+  "locked_layout_rules": [
+    "A4 portrait, one page, zero print margin",
+    "full-height green folio rail",
+    "numbered section labels with a single recruiter reading column",
+    "body text at least 9pt",
+    "main content bottom whitespace must not exceed 15%"
+  ],
+  "component_slots": ["header", "intro", "education", "internship", "projects", "core_abilities", "footer_qr"],
+  "component_diy_policy": {
+    "ai_may_decide": ["optional sections", "section numbering", "verified result highlights"],
+    "ai_must_not": ["invent facts or metrics", "move internship work into projects", "turn the ledger into a dashboard"]
+  },
+  "qa_gates": ["one page A4", "PingFang font", "logical reading order", "bottom whitespace <= 15%", "visual review"]
+}

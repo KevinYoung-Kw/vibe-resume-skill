@@ -9,7 +9,7 @@ Use this skill to produce polished, one-page resume artifacts from raw materials
 
 This skill is intentionally workflow-heavy. Resume work fails when the model jumps straight into writing prose or nudges layout by eye without QA. Follow the staged process below.
 
-When expanding the template library, work one direction at a time: produce a brief, implement in an isolated workspace, QA and compare against the baseline, then seek user approval before admission. Do not split the resume into module Agents; components are AI-decided slots inside the selected template. The admitted bundled templates are: `basic-a4` (baseline), `editorial` (dual-column, monochrome typography), `sidebar-compact` (dark sidebar + white main body), `timeline-grid` (vertical timeline spine with dot nodes), `minimal-prose` (Stripe/Notion ultra-clean single-column), `mono-raw` (Brutalist monospace, pure black-on-white), `code-poetry` (source code metaphor with syntax highlighting), and `swiss-neue` (Swiss International Typographic Style, invisible grid, light-weight name).
+When expanding the template library, work one direction at a time: produce a brief, implement in an isolated workspace, QA and compare against the baseline, then seek user approval before admission. Do not split the resume into module Agents; components are AI-decided slots inside the selected template. The admitted bundled templates are: `basic-a4` (baseline), `editorial` (dual-column editorial), `sidebar-compact` (dark sidebar), `timeline-grid` (growth timeline), `minimal-prose` (quiet prose), `mono-raw` (brutalist monospace), `code-poetry` (source-code metaphor), `swiss-neue` (Swiss grid), `bauhaus` (geometric editorial), `corporate-classic` (formal corporate), `gov-red` (Chinese institutional style), and `folio-ledger` (annual-report ledger).
 
 ## Core Principles
 
@@ -91,6 +91,7 @@ These constraints override template defaults. They apply to every template in th
    | minimal-prose | Stripe 极简，留白即设计 |
    | corporate-classic | 外企极简，纯黑白，内容为王 |
    | gov-red | 党政风，庄重规范，适合国企/事业单位 |
+   | folio-ledger | 年报档案索引，编号清晰，适合中高信息密度 |
    | mono-raw | Brutalist 风，工具即美学 |
    | code-poetry | 源代码隐喻，极客风 |
    | swiss-neue | 瑞士主义，隐形网格，克制优雅 |
@@ -239,6 +240,10 @@ When visual QA matters, show or inspect the rendered screenshot before declaring
 - `assets/templates/mono-raw/`: Brutalist monospace (Menlo/SF Mono). Pure black-on-white, dashed dividers, `>` prefixed sub-headings, data in bold. Raw, honest, technical.
 - `assets/templates/code-poetry/`: source code metaphor. `/* name */` comment block, `// SECTION` headers, `fn title()` entries, orange-highlighted metrics, `import {}` skills. Left gutter with line numbers.
 - `assets/templates/swiss-neue/`: Swiss International Typographic Style. Invisible grid (26mm label column right-aligned), mathematical spacing (8/4.5/2.5mm), light-weight (300) muted-red name as sole accent. Zero decorative elements.
+- `assets/templates/bauhaus/`: geometric single-column layout with red, blue, and yellow accents for creative roles.
+- `assets/templates/corporate-classic/`: restrained black-gray corporate layout for formal delivery.
+- `assets/templates/gov-red/`: Song-type institutional layout with restrained red section rules.
+- `assets/templates/folio-ledger/`: European annual-report ledger with a full-height folio rail, numbered sections, and a single recruiter reading column.
 - `references/template-contract.md`: layout contract for the basic A4 template.
 - `references/template-expansion.md`: protocol for adding new template styles with template Agents and main-Agent acceptance gates.
 - `references/qa-checklist.md`: final QA checklist and common failure modes.
@@ -277,5 +282,3 @@ Final response should include:
 - Any assumptions or missing assets.
 
 Keep the final response concise. If the user is still reviewing, summarize only the current change and the verification result.
-
-

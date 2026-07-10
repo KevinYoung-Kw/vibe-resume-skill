@@ -30,8 +30,8 @@ html, body {
   display: flex;
   align-items: baseline;
 }
-.section { margin-top: 6.5mm; }
-.entry + .entry { margin-top: 3.5mm; }
+.section { margin-top: 9.6mm; }
+.entry + .entry { margin-top: 4.5mm; }
 
 /* Label column: 24mm, right-aligned */
 .label {
@@ -113,10 +113,10 @@ html, body {
   line-height: 1.35;
 }
 .entry-body {
-  font-size: 9.5pt;
+  font-size: 9.8pt;
   color: #333;
-  line-height: 1.5;
-  margin-bottom: 2mm;
+  line-height: 1.62;
+  margin-bottom: 2.6mm;
 }
 .entry-body .num {
   font-weight: 600;
@@ -125,9 +125,9 @@ html, body {
 
 /* Skills */
 .skills {
-  font-size: 9.5pt;
+  font-size: 9.8pt;
   color: #333;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 .skills .cat {
   font-weight: 600;
@@ -154,8 +154,8 @@ html, body {
 </style>
 </head>
 <body>
-<main class="page">
-  <img class="avatar" src="assets/avatar.png" alt="">
+<main class="page" data-resume-page>
+  <img class="avatar" src="assets/avatar.png" alt="" data-resume-asset="avatar">
 
   <!-- Name block -->
   <div class="row">
@@ -168,75 +168,75 @@ html, body {
   </div>
 
   <!-- Profile -->
-  <div class="row section">
+  <div class="row section" data-resume-section="intro">
     <div class="label">简介</div>
     <div class="content">
-      <div class="entry-body">技术与业务理解兼具的产品候选人。过往在 AI 应用、内容增长与内部工具项目中，从用户场景出发完成需求分析、原型设计、实验验证和交付跟进。具备数据分析能力，能独立完成指标拆解、评测设计和效果验证。</div>
+      <div class="entry-body" data-resume-body>技术与业务理解兼具的产品候选人。过往在 AI 应用、内容增长与内部工具项目中，从用户场景出发完成需求分析、原型设计、实验验证和交付跟进。具备数据分析能力，能独立完成指标拆解、评测设计和效果验证。</div>
     </div>
   </div>
 
   <!-- Education -->
-  <div class="row section">
+  <div class="row section" data-resume-section="education">
     <div class="label">教育</div>
     <div class="content">
-      <div class="entry">
+      <div class="entry" data-resume-entry>
         <div class="entry-header">
           <span class="entry-title">岭南科技大学 · 软件工程 · 本科</span>
           <span class="entry-date">2022.09 – 2026.06</span>
         </div>
-        <div class="entry-body">GPA <span class="num">3.8</span>/5.0（前10%）· 校级一等奖学金 · 创新创业竞赛金奖 · CET-6 <span class="num">540</span><br>主修数据结构、数据库系统、人机交互、软件工程、机器学习基础、产品设计方法</div>
+        <div class="entry-body" data-resume-body>GPA <span class="num">3.8</span>/5.0（前10%）· 校级一等奖学金 · 创新创业竞赛金奖 · CET-6 <span class="num">540</span><br>主修数据结构、数据库系统、人机交互、软件工程、机器学习基础、产品设计方法</div>
       </div>
     </div>
   </div>
 
   <!-- Experience -->
-  <div class="row section">
+  <div class="row section" data-resume-section="experience">
     <div class="label">实习</div>
     <div class="content">
-      <div class="entry">
+      <div class="entry" data-resume-entry>
         <div class="entry-header">
           <span class="entry-title">某 AI 应用团队 · AI 应用产品经理</span>
           <span class="entry-date">2025.06 – 2026.03</span>
         </div>
         <div class="entry-sub">智能检索助手 · 需求分析→原型验证</div>
-        <div class="entry-body">面向知识库"搜得到但难以定位"的问题，负责检索入口、结果聚合、答案引用与反馈链路设计；输出 PRD、Figma 原型和可交互 Demo，推动方案进入研发排期，验证<span class="num">搜索定位效率提升</span>的核心路径。</div>
+        <div class="entry-body" data-resume-body>面向知识库"搜得到但难以定位"的问题，负责检索入口、结果聚合、答案引用与反馈链路设计；输出 PRD、Figma 原型和可交互 Demo，推动方案进入研发排期，验证<span class="num">搜索定位效率提升</span>的核心路径。</div>
         <div class="entry-sub">模型效果评测 · 指标体系与 Badcase 归因</div>
-        <div class="entry-body">搭建覆盖准确性、可读性、引用一致性的评测表，整理 <span class="num">300+</span> 条典型 Case，与算法同学复盘偏差原因；Prompt 调优使核心场景通过率从 <span class="num">72%</span> 提升至 <span class="num">86%</span>。</div>
+        <div class="entry-body" data-resume-body>搭建覆盖准确性、可读性、引用一致性的评测表，整理 <span class="num">300+</span> 条典型 Case，与算法同学复盘偏差原因；Prompt 调优使核心场景通过率从 <span class="num">72%</span> 提升至 <span class="num">86%</span>。</div>
       </div>
-      <div class="entry">
+      <div class="entry" data-resume-entry>
         <div class="entry-header">
           <span class="entry-title">某内容增长团队 · 内容增长产品助理</span>
           <span class="entry-date">2025.01 – 2025.05</span>
         </div>
         <div class="entry-sub">创作者数据看板 · 指标拆解与运营提效</div>
-        <div class="entry-body">梳理内容曝光、点击、转化和留存指标，设计看板字段与筛选方式；上线后周报整理时间从 <span class="num">4h</span> 缩短至 <span class="num">40min</span>，支持 <span class="num">20+</span> 位创作者复盘内容表现。</div>
+        <div class="entry-body" data-resume-body>梳理内容曝光、点击、转化和留存指标，设计看板字段与筛选方式；上线后周报整理时间从 <span class="num">4h</span> 缩短至 <span class="num">40min</span>，支持 <span class="num">20+</span> 位创作者复盘内容表现。</div>
       </div>
     </div>
   </div>
 
   <!-- Projects -->
-  <div class="row section">
+  <div class="row section" data-resume-section="projects">
     <div class="label">项目</div>
     <div class="content">
-      <div class="entry">
+      <div class="entry" data-resume-entry>
         <div class="entry-header">
           <span class="entry-title">校园 AI 助手 · Agent Workflow 原型</span>
           <span class="entry-date">2025.03 - 2025.06</span>
         </div>
-        <div class="entry-body">围绕学生事务咨询高频问题，设计"问题识别→知识检索→表单引导→人工转接"流程，低代码搭建可演示原型；在 <span class="num">30</span> 人试用中收集反馈，沉淀 FAQ、异常兜底与流程优化清单。</div>
+        <div class="entry-body" data-resume-body>围绕学生事务咨询高频问题，设计"问题识别→知识检索→表单引导→人工转接"流程，低代码搭建可演示原型；在 <span class="num">30</span> 人试用中收集反馈，沉淀 FAQ、异常兜底与流程优化清单。</div>
       </div>
-      <div class="entry">
+      <div class="entry" data-resume-entry>
         <div class="entry-header">
           <span class="entry-title">数据分析课程项目 · 用户流失预测</span>
           <span class="entry-date">2024.09 - 2024.12</span>
         </div>
-        <div class="entry-body">基于公开数据集完成用户行为清洗、特征构造和预测建模，把模型结果转译为产品策略建议；输出分析报告和可视化仪表盘，获优秀评级。</div>
+        <div class="entry-body" data-resume-body>基于公开数据集完成用户行为清洗、特征构造和预测建模，把模型结果转译为产品策略建议；输出分析报告和可视化仪表盘，获优秀评级。</div>
       </div>
     </div>
   </div>
 
   <!-- Skills -->
-  <div class="row section">
+  <div class="row section" data-resume-section="skills">
     <div class="label">能力</div>
     <div class="content">
       <div class="skills">
@@ -249,7 +249,7 @@ html, body {
   </div>
 
   <div class="qr-wrap">
-    <img class="qr-img" src="assets/qr.png" alt="">
+    <img class="qr-img" src="assets/qr.png" alt="" data-resume-asset="qr">
     <div class="qr-note">kw-aigc.cn</div>
   </div>
 </main>
