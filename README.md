@@ -225,6 +225,15 @@ vibe-resume-skill/
   <sub>Powered by Cola</sub>
 </p>
 
+## Star History
+
+<a href="https://www.star-history.com/?repos=KevinYoung-Kw%2Fvibe-resume-skill&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=KevinYoung-Kw/vibe-resume-skill&type=date&theme=dark&legend=top-left&sealed_token=MGIwE7UOti3rlRQhmUe4-jfNj-wVj54h-tryO1DkXRbrtetNAtNq5028PtHQLc7VgTAMh8tTS_urWW5CDoxb7o7xEiKrKO0DFtbynQNZmqlwWU5ySWUKGeZjSn2JemO-5cIcYE1TthUw0ReUs-L75kyg7TNNdHXZI-9nTDPtBuVebQCK9EGsPcXiED8O" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=KevinYoung-Kw/vibe-resume-skill&type=date&legend=top-left&sealed_token=MGIwE7UOti3rlRQhmUe4-jfNj-wVj54h-tryO1DkXRbrtetNAtNq5028PtHQLc7VgTAMh8tTS_urWW5CDoxb7o7xEiKrKO0DFtbynQNZmqlwWU5ySWUKGeZjSn2JemO-5cIcYE1TthUw0ReUs-L75kyg7TNNdHXZI-9nTDPtBuVebQCK9EGsPcXiED8O" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=KevinYoung-Kw/vibe-resume-skill&type=date&legend=top-left&sealed_token=MGIwE7UOti3rlRQhmUe4-jfNj-wVj54h-tryO1DkXRbrtetNAtNq5028PtHQLc7VgTAMh8tTS_urWW5CDoxb7o7xEiKrKO0DFtbynQNZmqlwWU5ySWUKGeZjSn2JemO-5cIcYE1TthUw0ReUs-L75kyg7TNNdHXZI-9nTDPtBuVebQCK9EGsPcXiED8O" />
+ </picture>
+</a>
 <p align="center">
   <img src="assets/wechat-qr.jpg" width="220" alt="公众号：水的实践说"><br>
   <sub>关注公众号「水的实践说」获取更多 AI 实践内容</sub>
