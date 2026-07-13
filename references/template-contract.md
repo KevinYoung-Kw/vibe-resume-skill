@@ -55,6 +55,8 @@ Adjust top coordinates only after content is stable.
 - Third-level item to its body: tight but readable.
 - Third-level item to next third-level item in the same company: compact and consistent.
 - Different companies/projects: slightly larger than internal item gaps, but not so large that the page loses density.
+- Body copy must remain at least `9pt` / `12px` and regular weight (`400`). Supporting labels may be lighter.
+- Do not shrink type while large gaps remain. A blank vertical band over roughly two body line-heights between consecutive semantic blocks must be reduced unless the template explicitly reserves it.
 - Core abilities: title and body must not overlap; QR can sit to the right or lower-right, but body text must keep a safe margin.
 - Hard density rule: in final QA, the main content bottom whitespace must be no more than 15% of page height. A QR code or footer placed low on the page must not be used to hide an empty main content area.
 - If a finished screenshot has large empty areas, tune body font size, line-height, and vertical spacing before adding weak content. The page should feel full, credible, and calm.
@@ -65,6 +67,7 @@ Adjust top coordinates only after content is stable.
 - Put actual work under the correct experience block. Do not place internship features under projects if they were internship work.
 - Keep public projects under `项目经历`, `个人经历`, or a similar section.
 - Keep skills as capability statements, not disguised project history.
+- When editing an existing resume, preserve every user-selected entry and fact by default. Any deletion or fact-losing merge requires user approval before implementation.
 - Do not reveal internal links, issue IDs, patch/commit details, raw group chat names, or private document paths.
 
 ## Asset Rules

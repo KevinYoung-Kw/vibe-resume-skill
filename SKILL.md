@@ -23,6 +23,17 @@ When expanding the template library, work one direction at a time: produce a bri
 - Never expose internal links, issue IDs, private group chats, patches, commits, document paths, raw prompts, or confidential tool names unless the user explicitly wants them shown.
 - Use a final QA pass. A resume is not done until PDF page count, fonts, text extraction, screenshot, spacing, and sensitive-word checks pass.
 
+## Content Preservation & Deletion Gate
+
+Treat an existing resume and user-prepared resume copy as source material the user has already selected. **Do not silently delete or materially weaken it to make the page fit.**
+
+- Default to preservation mode when iterating an existing PDF, Word, PPTX, or HTML resume. Text the user pastes and explicitly asks to include also counts as selected resume content. Keep every company, role, project, date, metric, credential, named deliverable, link, and user-authored bullet unless the user approves its removal.
+- A major edit includes deleting an entire entry or bullet, merging entries so a distinct fact disappears, removing a metric/result, changing section ownership, or replacing a specific accomplishment with a generic summary. Ask before making any of these changes.
+- Compression is allowed without a separate approval only when it removes repetition or shortens syntax while preserving the same facts, ownership, result, and level of specificity.
+- If the requested content does not fit one page, first repair layout and wording within the readability limits below. If it still does not fit, stop and give the user explicit choices: keep all content in two pages; approve a named list of lower-priority cuts; or keep one page with a denser but still readable layout.
+- If the user says `全部保留`, `不要删减`, or equivalent, do not remove content. A one-page preference never overrides an explicit preservation request.
+- Maintain a short change ledger during iteration: `retained`, `compressed without fact loss`, and `proposed removal`. Show proposed removals to the user before applying them.
+
 ## Layout Hard Constraints
 
 These constraints override template defaults. They apply to every template in this family.
@@ -38,9 +49,16 @@ These constraints override template defaults. They apply to every template in th
 - Template HTML provides a **structural skeleton**. The font sizes, line-heights, and section gaps defined in templates are **reference values, not fixed**.
 - When filling a template with real content, AI must adapt spacing to fit the content volume:
   - **Content is light** (fewer experiences, shorter descriptions): increase font-size (+0.5–1pt), increase line-height (+0.05–0.1), increase section gaps slightly. The goal is a page that feels intentionally spacious and calm, not empty.
-  - **Content is heavy** (many experiences, long descriptions): decrease section gaps, keep font-size stable or reduce by 0.5pt max. Never go below 9pt for body text.
+  - **Content is heavy** (many experiences, long descriptions): remove excessive section/entry gaps first, compress repeated wording without dropping facts, then keep font-size stable or reduce by 0.5pt max. Never go below 9pt for body text.
   - **Bottom whitespace > 15%**: this is a hard QA failure. Adjust font-size/line-height/section-gap upward until the page is visually balanced.
 - Do not leave large hollow areas. Do not pad with weak content to fill space — adjust typography instead.
+- Never shrink body text while large section or entry gaps remain. Small, thin text plus visible hollow bands is a layout failure even when the PDF is one page.
+
+### Typography Readability Floor (正文字体下限)
+
+- Recruiter-facing body text must be at least `9pt` (`12px` in CSS) and normally use `font-weight: 400` or stronger. Weight `300` is reserved for dates, parentheses, captions, and other supporting labels, not paragraphs.
+- Body line-height should normally stay between `1.35` and `1.7`. Do not reduce line-height below the point where adjacent lines visually touch.
+- If the page is sparse, increase body size and line-height before increasing large inter-section gaps. If the page is dense, reduce gaps before reducing type.
 
 ### Avatar & QR (头像与二维码)
 
@@ -52,7 +70,8 @@ These constraints override template defaults. They apply to every template in th
 ### Section Spacing (模块间距)
 
 - Section-to-section vertical gap should be proportional to the content density. Reference range: 4–7mm between major sections.
-- Within a section, entry-to-entry gap: 2–3.5mm.
+- Within the same company or section, entry-to-entry gap: 2–3.5mm. Different companies may use 3–5mm, but should not look detached.
+- A blank vertical band larger than roughly two body line-heights between consecutive semantic blocks is a QA failure unless the selected template explicitly defines that area as an intentional visual zone.
 - These values flex based on content volume — they are not fixed. The goal is consistent visual rhythm across the full page, not mathematical equality.
 
 ## When Starting
@@ -64,6 +83,7 @@ These constraints override template defaults. They apply to every template in th
    - Existing resumes: PDF, PPTX, DOCX, HTML.
    - Supporting materials: work summaries, project docs, portfolio websites, spreadsheets, screenshots.
    - Assets: avatar/headshot, QR code, portfolio URL, website URL.
+   - Decide preservation mode: existing resume content and text explicitly requested for inclusion are `preserve by default`; background materials not marked for full inclusion may be selectively summarized only after the user understands that not every source detail will appear.
 3. Choose the template.
    - Start with `assets/templates/basic-a4/` unless the user names another template.
    - Future templates should live under `assets/templates/<template-name>/`.
@@ -122,7 +142,7 @@ Extract facts from source files and websites. Keep a short fact inventory before
 - Skills: tools, workflows, domain knowledge, evaluation methods.
 - Links/assets: website, portfolio, QR, avatar/headshot.
 
-Filter facts by role relevance. De-emphasize or remove unrelated side projects unless they support the target role.
+Rank facts by role relevance, but do not silently remove content from an existing resume. Mark lower-priority material as a proposed cut and ask the user before applying it. For a new resume built from raw supporting files, tell the user when the source volume requires representative selection rather than exhaustive inclusion.
 
 ### Step 3: Resume Copywriting
 
@@ -161,7 +181,7 @@ For a one-page A4 resume, use absolute-positioned blocks only when preserving a 
 The selected template owns the structure; AI owns the component choice inside allowed slots.
 
 - Keep the default backbone unless the template contract says otherwise: header, intro, education, internship, project or personal experience, core abilities, footer/QR.
-- AI may add, remove, rename, or merge optional sections when that improves the candidate's story.
+- For a new resume assembled from raw materials, AI may add, rename, or merge optional sections when that improves the candidate's story. When iterating an existing resume, removing or merging a section requires the Content Preservation & Deletion Gate above.
 - AI should decide whether optional content deserves its own section or should be merged into education/core abilities/project experience.
 
 **Available section titles** (pick what fits the candidate; do not use all):
@@ -191,9 +211,11 @@ After the first PDF export, inspect the screenshot as a whole page, not only lin
    - Increase section gaps by 1–2mm
    - Only after all three are maxed out, consider adding an optional section (awards, tools, self-summary)
 3. **If content is dense** and overflows or feels cramped:
-   - Reduce section gaps first (down to 4mm minimum between sections)
+   - Remove abnormal hollow bands and reduce section gaps first (down to 4mm minimum between sections)
    - Reduce entry gaps (down to 2mm minimum)
-   - Shorten copy before shrinking font below 9pt
+   - Compress repetition while preserving every fact
+   - Reduce body font by at most 0.5pt, never below 9pt or regular weight
+   - If it still does not fit, ask the user before deleting content or moving to two pages
 4. **Never use `letter-spacing` for density control.** It is a design accent, not a spacing tool.
 5. **Re-export and screenshot after each adjustment.** A page that passes CLI checks can still fail visually.
 
@@ -223,10 +245,16 @@ Minimum checks:
    - no overlap, clipping, text touching QR/avatar, or title/body collision
    - title-to-body spacing matches the section hierarchy
    - body line-height is not cramped
+   - body text is at least 9pt/12px and recruiter-facing paragraphs are not rendered with light (`300`) weight
+   - no unexplained vertical gap exceeds roughly two body line-heights between consecutive sections or entries
    - main content bottom whitespace is no more than 15% of page height; this is a hard QA gate, not a suggestion
    - no large hollow areas; light resumes should use slightly larger type and calmer spacing
    - section rhythm is consistent
    - QR and footer captions align
+7. Check content preservation against the source inventory:
+   - every original company, project, date, metric, credential, and user-authored bullet is retained or explicitly approved for removal
+   - compressed wording preserves the original fact, ownership, specificity, and result
+   - any pending deletion proposal is surfaced to the user instead of being applied silently
 
 When visual QA matters, show or inspect the rendered screenshot before declaring completion.
 
