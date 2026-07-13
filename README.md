@@ -12,7 +12,7 @@
 
 Skill 内置 12 套 A4 模板，并把一页排版、内容密度、头像、二维码和最终检查等要求写进了规则。你只需要说明想改什么，剩下的编辑与排版交给 AI。
 
-![Vibe Resume Skill 工作原理](assets/demos/hero.png)
+![支持主流 Coding Agent](assets/demos/coding-agents.png)
 
 ## 适用场景
 
@@ -33,6 +33,8 @@ Skill 内置 12 套 A4 模板，并把一页排版、内容密度、头像、二
    同一段经历投递不同岗位时，事实不变，但顺序、标题、关键词和篇幅侧重需要调整。把 JD 一并提供，就可以生成对应版本。
 
    `基于这份 JD 调整为数据产品方向，保留原始事实，并单独导出一个版本。`
+
+![Vibe Resume Skill 工作原理](assets/demos/hero.png)
 
 ## 怎么用
 
