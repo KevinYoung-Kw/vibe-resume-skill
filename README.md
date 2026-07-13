@@ -62,9 +62,13 @@ https://github.com/KevinYoung-Kw/vibe-resume-skill
 
 ![12 套真实 HTML 简历模板](assets/demos/templates.png)
 
-### 实用系
+<details>
+<summary><b>展开查看全部 12 套模板</b></summary>
+<br>
 
-优先考虑招聘阅读顺序、信息密度与正式投递场景。
+<h3>实用系</h3>
+
+<p>优先考虑招聘阅读顺序、信息密度与正式投递场景。</p>
 
 <table>
 <tr>
@@ -81,9 +85,9 @@ https://github.com/KevinYoung-Kw/vibe-resume-skill
 </tr>
 </table>
 
-### 个性系
+<h3>个性系</h3>
 
-保留完整的设计语言，适合技术、设计与创意岗位。
+<p>保留完整的设计语言，适合技术、设计与创意岗位。</p>
 
 <table>
 <tr>
@@ -93,6 +97,8 @@ https://github.com/KevinYoung-Kw/vibe-resume-skill
 <td align="center"><img src="assets/previews/bauhaus.jpg" width="160"><br><b>bauhaus</b><br><sub>包豪斯几何 · 三原色点缀</sub></td>
 </tr>
 </table>
+
+</details>
 
 模板不是简单换色。每套模板都有独立的信息结构、字号层级、间距节奏与适用场景。
 
@@ -104,8 +110,6 @@ https://github.com/KevinYoung-Kw/vibe-resume-skill
 - 尽量保持一页，并避免文字溢出、重叠或异常换行
 - 保持头像原色，确保二维码清晰且不被遮挡
 - 导出后检查整页效果，发现问题继续修改
-
-![简历导出与检查](assets/demos/qa.png)
 
 ## Star History
 
