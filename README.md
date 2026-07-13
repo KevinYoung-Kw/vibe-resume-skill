@@ -1,4 +1,4 @@
-![vibe-resume-skill](assets/cover.jpg)
+![vibe-resume-skill](assets/cover.png)
 
 # vibe-resume-skill
 
@@ -12,7 +12,7 @@
 
 Skill 内置 12 套 A4 模板，并把一页排版、内容密度、头像、二维码和最终检查等要求写进了规则。你只需要说明想改什么，剩下的编辑与排版交给 AI。
 
-![AI 生成并修改 HTML 简历](assets/demos/hero.png)
+![Vibe Resume Skill 工作原理](assets/demos/hero.png)
 
 ## 适用场景
 
@@ -59,6 +59,8 @@ https://github.com/KevinYoung-Kw/vibe-resume-skill
 目前已在 Codex、Kimi Work、WorkBuddy 和扣子空间中实际测试。
 
 ## 12 套模板
+
+![12 套真实 HTML 简历模板](assets/demos/templates.png)
 
 ### 实用系
 
