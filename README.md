@@ -1,6 +1,6 @@
-![vibe-resume-skill](assets/cover.png)
+![Vibe Resume Skill：AI 简历生成与排版](assets/cover.png)
 
-# vibe-resume-skill
+# Vibe Resume Skill：AI 简历生成与排版
 
 **快速生成精美简历，快速更新和编排内容，把时间留给经历本身，而不是字号、间距和分页。**
 
