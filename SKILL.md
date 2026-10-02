@@ -1,6 +1,14 @@
 ---
 name: html-resume-builder
-description: Build one-page HTML/PDF resumes from copy-paste YAML using one of 12 official templates. HARD GATES: deliver exactly one A4 page; never invent a layout — copy assets/templates/<id> into output/<id>/ and edit that copy only. Keep a full inventory in raw.data.yaml. For each job, COPY selected entries into resume.data.yaml (polish there), then apply that file to a template. Apply pasted YAML by replacing visible text in the official resume.html, then run QA. Default template is basic-a4. Use when creating, iterating, polishing copy, migrating, exporting, or designing resume/CV HTML/PDF. For polishing resume copy, prefer writing-oriented models (Claude Fable 5 / Claude Opus 4.6-4.7 or Opus 5 / Kimi K3 / GLM-5.1-5.3-max / Qwen 3.8 Max); do not use GPT-5.6 Terra/Luna or GPT-5.5 Instant.
+description: >-
+  Build one-page HTML/PDF resumes from copy-paste YAML using one of 12 official templates.
+  HARD GATES: deliver exactly one A4 page; never invent a layout — copy assets/templates/<id> into output/<id>/ and edit that copy only.
+  Keep a full inventory in raw.data.yaml.
+  For each job, COPY selected entries into resume.data.yaml (polish there), then apply that file to a template.
+  Apply pasted YAML by replacing visible text in the official resume.html, then run QA.
+  Default template is basic-a4.
+  Use when creating, iterating, polishing copy, migrating, exporting, or designing resume/CV HTML/PDF.
+  For polishing resume copy, prefer writing-oriented models (Claude Fable 5 / Claude Opus 4.6-4.7 or Opus 5 / Kimi K3 / GLM-5.1-5.3-max / Qwen 3.8 Max); do not use GPT-5.6 Terra/Luna or GPT-5.5 Instant.
 ---
 
 # HTML Resume Builder
