@@ -2,6 +2,10 @@
 
 # Vibe Resume Skill：AI 简历生成与排版
 
+<!-- yarkr:badges:start -->
+[![Indexed on Yarkr](https://api.yarkr.com/functions/v1/api/api/v1/badges/repos/KevinYoung-Kw/vibe-resume-skill/version.svg)](https://yarkr.com/arks/kevinyoung-kw/vibe-resume-skill)
+<!-- yarkr:badges:end -->
+
 **快速生成精美简历，快速更新和编排内容，把时间留给经历本身，而不是字号、间距和分页。**
 
 [![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-555555?style=flat-square)](LICENSE)
@@ -162,6 +166,38 @@ https://github.com/KevinYoung-Kw/vibe-resume-skill
    <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=KevinYoung-Kw/vibe-resume-skill&type=date&legend=top-left&sealed_token=MGIwE7UOti3rlRQhmUe4-jfNj-wVj54h-tryO1DkXRbrtetNAtNq5028PtHQLc7VgTAMh8tTS_urWW5CDoxb7o7xEiKrKO0DFtbynQNZmqlwWU5ySWUKGeZjSn2JemO-5cIcYE1TthUw0ReUs-L75kyg7TNNdHXZI-9nTDPtBuVebQCK9EGsPcXiED8O" />
  </picture>
 </a>
+
+<!-- yarkr:install:start -->
+## Install with Yarkr
+
+This repo is indexed on [Yarkr](https://yarkr.com/arks/kevinyoung-kw/vibe-resume-skill) as the ark [kevinyoung-kw/vibe-resume-skill](https://yarkr.com/arks/kevinyoung-kw/vibe-resume-skill), so its skills install into Claude Code, Codex, Cursor and other agent harnesses with one command.
+
+### CLI
+
+Install the whole ark, which Yarkr keeps equal to this repo:
+
+```bash
+npx yarkr-cli sync kevinyoung-kw/vibe-resume-skill
+```
+
+Or add individual skills:
+
+```bash
+npx yarkr-cli add skill:kevinyoung-kw/vibe-resume-skill/html-resume-builder
+```
+
+No Node.js? `curl -fsSL https://yarkr.com/install.sh | sh` (macOS, Linux) or `irm https://yarkr.com/install.ps1 | iex` (Windows PowerShell) installs `yarkr` as a standalone binary; then type `yarkr` in place of `npx yarkr-cli`.
+
+### MCP
+
+Connect your agent to the ark over MCP:
+
+```bash
+npx yarkr-cli mcp add kevinyoung-kw/vibe-resume-skill
+```
+
+Or point any MCP client at `https://api.yarkr.com/functions/v1/api/mcp/o/kevinyoung-kw/vibe-resume-skill`.
+<!-- yarkr:install:end -->
 
 ## Contributing
 
